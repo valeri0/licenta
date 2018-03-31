@@ -12,5 +12,6 @@ class UserRepository:
 
     def create_user(self,user):
         self.db_context.add(user)
+        self.db_context.commit()
 
 
