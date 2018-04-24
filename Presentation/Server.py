@@ -8,6 +8,9 @@ from Data.Utils.LoginForm import LoginForm
 from Data.Utils.RegistrationForm import RegistrationForm
 from Presentation.Authentication import page
 
+from flask_login import current_user, login_user
+
+
 app = Flask(__name__)
 app.register_blueprint(page)
 
@@ -33,6 +36,10 @@ security = Security(app, user_repository.get_user_datastore())
 
 @app.route("/")
 def index():
+
+    if current_user.is_authenticated:
+        return render_template("dashboard.html")
+
     register_form = RegistrationForm()
     login_form = LoginForm()
     return render_template("register.html", login_form=login_form, register_form=register_form)
