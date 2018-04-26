@@ -8,15 +8,15 @@ from flask_login import current_user, login_user,logout_user
 
 from Data.Domain.User import User
 
-page = Blueprint('auth', __name__, template_folder='templates')
+auth = Blueprint('auth', __name__, template_folder='templates')
 
 user_service = UserService()
 
 
-@page.route("/login", methods=['POST'])
+@auth.route("/login", methods=['POST'])
 def login():
     if current_user.is_authenticated:
-        return render_template("dashboard.html")
+        return render_template("dashboard.html",name = current_user.get_display_name())
 
     login_form = LoginForm()
     register_form = RegistrationForm()
@@ -34,13 +34,13 @@ def login():
 
             else:
                 login_user(user)
-                return render_template("dashboard.html")
+                return render_template("dashboard.html",name = user.get_display_name())
 
     else:
         return render_template("register.html", login_form=login_form, register_form=register_form)
 
 
-@page.route("/register", methods=['POST'])
+@auth.route("/register", methods=['POST'])
 def register():
     if current_user.is_authenticated:
         return render_template("dashboard.html")
@@ -53,14 +53,15 @@ def register():
             user_service.create_user(register_form.email.data,
                                      register_form.password.data,
                                      "user")
-            return render_template("dashboard.html")
+            login_user(User.query.filter_by(email=register_form.email.data).first())
+            return render_template("dashboard.html",name = current_user.get_display_name())
         else:
             return render_template("register.html", login_form=login_form, register_form=register_form)
     else:
         return render_template("register.html", login_form=login_form, register_form=register_form)
 
 
-@page.route("/logout",methods=['GET'])
+@auth.route("/logout", methods=['GET'])
 def logout():
     current_user.is_authenticated = False
     user_service.logout_user(current_user)

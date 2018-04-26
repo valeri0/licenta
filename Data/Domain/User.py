@@ -32,3 +32,6 @@ class User(Base, UserMixin):
 
     def check_password(self, input_password):
         return bcrypt.check_password_hash(self.password, input_password)
+
+    def get_display_name(self):
+        return self.email[:self.email.index('@')]

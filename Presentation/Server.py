@@ -6,13 +6,15 @@ from Business.Repositories.UserRepository import UserRepository
 from Business.Services.UserService import UserService
 from Data.Utils.LoginForm import LoginForm
 from Data.Utils.RegistrationForm import RegistrationForm
-from Presentation.Authentication import page
+from Presentation.Authentication import auth
+from Presentation.Courses import courses
 
 from flask_login import current_user, login_user
 
 
 app = Flask(__name__)
-app.register_blueprint(page)
+app.register_blueprint(auth)
+app.register_blueprint(courses)
 
 
 app.config['SECRET_KEY'] = 'super-secret'
@@ -38,7 +40,7 @@ security = Security(app, user_repository.get_user_datastore())
 def index():
 
     if current_user.is_authenticated:
-        return render_template("dashboard.html")
+        return render_template("dashboard.html",name = current_user.get_display_name())
 
     register_form = RegistrationForm()
     login_form = LoginForm()
