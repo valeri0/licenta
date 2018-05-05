@@ -1,25 +1,19 @@
 
 <div>
     <div id="editor">
-def myfunc(x,y):
-    if x > y:
-        return x+y
-    elif x < y:
-        return x-y
-    else
-        return x*y
-
-# Test cases
-print myfunc(2,3)
-print myfunc(10,2)
-print myfunc(5,5)
+        print('Hello world')
     </div>
 
+    <textarea id = "console" readonly>
+        Output...
+
+    </textarea>
+
    <div id="buttons">
-  <button class="btn waves-effect waves-light  indigo darken-3" type="submit" name="action">Test
+  <button id="test-button" class="btn waves-effect waves-light  indigo darken-3" type="submit" name="action">Test
     <i class="material-icons right"></i>
   </button>
-  <button class="btn waves-effect waves-light red lighten-1" type="submit" name="action">Submit
+  <button id="submit-button" class="btn waves-effect waves-light red lighten-1" type="submit" name="action">Submit
     <i class="material-icons right"></i>
   </button>
 
@@ -29,11 +23,4 @@ print myfunc(5,5)
 
 
 <script src="../static/aceditor/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
-
-<script>
-    var editor = ace.edit("editor");
-    editor.setTheme("ace/theme/chaos");
-    editor.setShowPrintMargin(false);
-    editor.session.setMode("ace/mode/python");document.getElementById('editor').style.fontSize='14px';
-    console.log(editor.Text)
-</script>
+<script src="../static/js/send_code_to_server.js" type="text/javascript" charset="utf-8"></script>
