@@ -1,5 +1,5 @@
 import os
-from subprocess import Popen, PIPE, STDOUT, STD_ERROR_HANDLE, call
+from subprocess import Popen, PIPE
 
 
 class CompilerRepository:

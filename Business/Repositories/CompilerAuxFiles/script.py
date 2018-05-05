@@ -1,4 +1,3 @@
-def func(a,b):
-    return a+b
+
+        print('Hello world')
     
-print(func(5,'3'))
