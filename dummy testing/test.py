@@ -1,20 +1,19 @@
-import subprocess
+from elo import rate_1vs1, quality_1vs1, adjust_1vs1
+
+import elo
+
+user_Rating = elo.Rating()
+course_rating = elo.Rating(600)
+
+# draw probability
+q = quality_1vs1(user_Rating, course_rating)
+
+# rate_1vs1(r1,r2) => if r1 beats r2
+# rate_1vs1(r1,r2) => if r2 beats r1
 
 
-def run_in_docker(source_code):
-    with open("script.py","w") as write_file:
-        for line in source_code.strip():
-            write_file.write(line)
+user_Rating, course_rating = elo.rate_1vs1(user_Rating, course_rating)
 
+print(user_Rating)
 
-run_in_docker(
-    "def myfunc(x,y):\
-    if x > y:\
-        return x+y\
-    elif: x < y:\
-        return x-y\
-    else:\
-        return x*y\
-# Test cases\
-print myfunc(2,3)\
-print myfunc(10,2)")
+print(course_rating)

@@ -7,7 +7,7 @@ from Business.Services.UserService import UserService
 from Data.Utils.LoginForm import LoginForm
 from Data.Utils.RegistrationForm import RegistrationForm
 from Presentation.Authentication import auth
-from Presentation.Courses import courses
+from Presentation.Lessons import lessons
 from Presentation.Compiler import compiler
 
 import json
@@ -16,7 +16,7 @@ from flask_login import current_user, login_user
 
 app = Flask(__name__)
 app.register_blueprint(auth)
-app.register_blueprint(courses)
+app.register_blueprint(lessons)
 app.register_blueprint(compiler)
 
 app.config['SECRET_KEY'] = 'super-secret'

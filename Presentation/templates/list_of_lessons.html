@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="../static/css/dashboard.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="../static/css/list_of_lessons.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/prism.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/CodeFlask.js/0.1.1/codeflask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+</head>
+<body>
+
+{% include 'navbar.html' %}
+
+<div class="container">
+
+
+    <ul class="collection">
+        {% for lesson in lessons %}
+            <li class="collection-item avatar">
+      <i class="material-icons circle">code</i>
+      <h4>{{ lesson.title }}</h4>
+      <a href="/lesson/{{ lesson.id }}" class="secondary-content">go</a>
+    </li>
+        {% endfor %}
+
+
+  </ul>
+
+</div>
+
+
+
+
+</body>
+</html>

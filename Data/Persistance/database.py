@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
-engine = create_engine('mysql://root:admin@localhost/my_app')
+engine = create_engine('mysql://root:admin@localhost/my_app',pool_recycle=3600)
 db_session = scoped_session(sessionmaker(autocommit=False,
                                          autoflush=False,
                                          bind=engine))
@@ -12,5 +12,5 @@ Base.query = db_session.query_property()
 
 
 def init_db():
-    from Data.Domain import Role, User
+    from Data.Domain import Role, User,Lesson,UserLessonDifficulty
     Base.metadata.create_all(bind=engine)

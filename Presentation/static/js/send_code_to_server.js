@@ -22,7 +22,7 @@ function render_output_to_console(respone_from_server){
     if(_json.code == 500){
 
         output_console.style.color='red';
-        output_console.value = _json.message;
+        output_console.value = "Output: "+_json.message;
 
         //Error at:  line 2
         var line_number = parseInt(_json.message[16])-1;
@@ -36,7 +36,7 @@ function render_output_to_console(respone_from_server){
     // error at execution
     else {
         output_console.style.color='green';
-        output_console.value = String(_json.message);
+        output_console.value = "Output: "+String(_json.message);
     }
 }
 

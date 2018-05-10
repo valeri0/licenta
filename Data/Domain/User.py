@@ -13,6 +13,7 @@ class User(Base, UserMixin):
     name = Column(String(50))
     email = Column(String(100), unique=True)
     password = Column(String(512))
+    elo_rating = Column(Integer())
     active = Column(Boolean())
     role_id = Column(Integer(), ForeignKey('role.id'))
     role = relationship('Role')
