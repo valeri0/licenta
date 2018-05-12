@@ -5,32 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f9498f0-9fe6-4ec6-9291-8a4075cb0f1b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Business/Repositories/LessonRepository.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Business/Services/LessonService.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/Domain/Lesson.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/Domain/UserLessonDifficulty.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Presentation/Lessons.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Presentation/static/css/list_of_lessons.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Presentation/templates/list_of_lessons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tests/test_lesson_service.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Presentation/Courses.py" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Business/Repositories/EloRatingRepository.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/licenta_python.iml" afterPath="$PROJECT_DIR$/.idea/licenta_python.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Business/Repositories/CompilerAuxFiles/script.py" afterPath="$PROJECT_DIR$/Business/Repositories/CompilerAuxFiles/script.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Business/Repositories/CompilerRepository.py" afterPath="$PROJECT_DIR$/Business/Repositories/CompilerRepository.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Business/Repositories/LessonRepository.py" afterPath="$PROJECT_DIR$/Business/Repositories/LessonRepository.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Business/Repositories/UserRepository.py" afterPath="$PROJECT_DIR$/Business/Repositories/UserRepository.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Business/Services/CompilerService.py" afterPath="$PROJECT_DIR$/Business/Services/CompilerService.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Business/Services/UserService.py" afterPath="$PROJECT_DIR$/Business/Services/UserService.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Domain/Lesson.py" afterPath="$PROJECT_DIR$/Data/Domain/Lesson.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Domain/User.py" afterPath="$PROJECT_DIR$/Data/Domain/User.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Domain/UserLessonDifficulty.py" afterPath="$PROJECT_DIR$/Data/Domain/UserLessonDifficulty.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Persistance/database.py" afterPath="$PROJECT_DIR$/Data/Persistance/database.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Presentation/Server.py" afterPath="$PROJECT_DIR$/Presentation/Server.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Presentation/static/css/dashboard.css" afterPath="$PROJECT_DIR$/Presentation/static/css/dashboard.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Presentation/static/css/editor.css" afterPath="$PROJECT_DIR$/Presentation/static/css/editor.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Presentation/Compiler.py" afterPath="$PROJECT_DIR$/Presentation/Compiler.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Presentation/static/js/send_code_to_server.js" afterPath="$PROJECT_DIR$/Presentation/static/js/send_code_to_server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Presentation/templates/dashboard.html" afterPath="$PROJECT_DIR$/Presentation/templates/dashboard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Presentation/templates/editor.html" afterPath="$PROJECT_DIR$/Presentation/templates/editor.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Presentation/templates/lesson.html" afterPath="$PROJECT_DIR$/Presentation/templates/lesson.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Presentation/templates/navbar.html" afterPath="$PROJECT_DIR$/Presentation/templates/navbar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tests/test_user_service.py" afterPath="$PROJECT_DIR$/Tests/test_user_service.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dummy testing/test.py" afterPath="$PROJECT_DIR$/dummy testing/test.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,26 +35,31 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/licenta$UserServiceTest.coverage" NAME="UserServiceTest Coverage Results" MODIFIED="1525983213770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
     <SUITE FILE_PATH="coverage/licenta_python$test.coverage" NAME="test Coverage Results" MODIFIED="1521986904937" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/licenta$Nosetests_for_test_user_service_UserServiceTest_test.coverage" NAME="Nosetests for test_user_service.UserServiceTest.test Coverage Results" MODIFIED="1526073454900" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
     <SUITE FILE_PATH="coverage/licenta_python$licenta_python.coverage" NAME="licenta_python Coverage Results" MODIFIED="1521971861316" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/licenta$Nosetests_for_test_user_service_UserServiceTest.coverage" NAME="Nosetests for test_user_service.UserServiceTest Coverage Results" MODIFIED="1525986236664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
+    <SUITE FILE_PATH="coverage/licenta$Nosetests_for_test_user_service_UserServiceTest.coverage" NAME="Nosetests for test_user_service.UserServiceTest Coverage Results" MODIFIED="1526073758291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
     <SUITE FILE_PATH="coverage/licenta$Lesson.coverage" NAME="Lesson Coverage Results" MODIFIED="1525977711022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Data/Domain" />
     <SUITE FILE_PATH="coverage/licenta$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1522506673423" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Presentation/Controllers" />
     <SUITE FILE_PATH="coverage/licenta$Server__1_.coverage" NAME="Server (1) Coverage Results" MODIFIED="1522506944006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Presentation/Controllers" />
+    <SUITE FILE_PATH="coverage/licenta$Nosetests_for_test_user_service_UserServiceTest_test_get_current_user.coverage" NAME="Nosetests for test_user_service.UserServiceTest.test_get_current_user Coverage Results" MODIFIED="1526073170816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
     <SUITE FILE_PATH="coverage/licenta_python$database__1_.coverage" NAME="database (1) Coverage Results" MODIFIED="1521973533098" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Data/Persistance" />
+    <SUITE FILE_PATH="coverage/licenta$script.coverage" NAME="script Coverage Results" MODIFIED="1526073883417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Business/Repositories/CompilerAuxFiles" />
     <SUITE FILE_PATH="coverage/licenta$UserRepository.coverage" NAME="UserRepository Coverage Results" MODIFIED="1522177234718" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Business/Repositories" />
     <SUITE FILE_PATH="coverage/licenta$Nosetests_for_test_lesson_service_LessonServiceTest_test_get_lessons_ordered_by_id.coverage" NAME="Nosetests for test_lesson_service.LessonServiceTest.test_get_lessons_ordered_by_id Coverage Results" MODIFIED="1525988333680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
     <SUITE FILE_PATH="coverage/licenta$Nosetests_in_test_lesson_service_py.coverage" NAME="Nosetests in test_lesson_service.py Coverage Results" MODIFIED="1525988212547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
-    <SUITE FILE_PATH="coverage/licenta$Nosetests_in_test_user_service_py.coverage" NAME="Nosetests in test_user_service.py Coverage Results" MODIFIED="1525985335744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
-    <SUITE FILE_PATH="coverage/licenta$Nosetests_for_test_user_service_UserServiceTest_test_get_user_by_id.coverage" NAME="Nosetests for test_user_service.UserServiceTest.test_get_user_by_id Coverage Results" MODIFIED="1525985357169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
+    <SUITE FILE_PATH="coverage/licenta$Nosetests_in_test_user_service_py.coverage" NAME="Nosetests in test_user_service.py Coverage Results" MODIFIED="1526073764238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
+    <SUITE FILE_PATH="coverage/licenta$Nosetests_for_test_user_service_UserServiceTest_test_get_user_by_id.coverage" NAME="Nosetests for test_user_service.UserServiceTest.test_get_user_by_id Coverage Results" MODIFIED="1526073492875" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
     <SUITE FILE_PATH="coverage/licenta$Authentication__1_.coverage" NAME="Authentication (1) Coverage Results" MODIFIED="1524601494216" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Presentation" />
     <SUITE FILE_PATH="coverage/licenta_python$database.coverage" NAME="database Coverage Results" MODIFIED="1521973441639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/01-Data/Persistance" />
     <SUITE FILE_PATH="coverage/licenta$Authentication.coverage" NAME="Authentication Coverage Results" MODIFIED="1522506995838" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Presentation/Controllers" />
-    <SUITE FILE_PATH="coverage/licenta$Server.coverage" NAME="Server Coverage Results" MODIFIED="1525986266751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Presentation" />
+    <SUITE FILE_PATH="coverage/licenta$Server.coverage" NAME="Server Coverage Results" MODIFIED="1526122360906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Presentation" />
     <SUITE FILE_PATH="coverage/licenta$Role.coverage" NAME="Role Coverage Results" MODIFIED="1525977683272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Data/Domain" />
+    <SUITE FILE_PATH="coverage/licenta$UserService.coverage" NAME="UserService Coverage Results" MODIFIED="1526073729785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Business/Services" />
     <SUITE FILE_PATH="coverage/licenta$CompilerRepository.coverage" NAME="CompilerRepository Coverage Results" MODIFIED="1525534567802" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Business/Repositories" />
     <SUITE FILE_PATH="coverage/licenta$User.coverage" NAME="User Coverage Results" MODIFIED="1525977699353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Data/Domain" />
-    <SUITE FILE_PATH="coverage/licenta$test.coverage" NAME="test Coverage Results" MODIFIED="1525367942655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/licenta$EloRatingRepository.coverage" NAME="EloRatingRepository Coverage Results" MODIFIED="1526121956144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Business/Repositories" />
     <SUITE FILE_PATH="coverage/licenta$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1525698437549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dummy testing" />
+    <SUITE FILE_PATH="coverage/licenta$test.coverage" NAME="test Coverage Results" MODIFIED="1526072016549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dummy testing" />
     <SUITE FILE_PATH="coverage/licenta_python$UserService.coverage" NAME="UserService Coverage Results" MODIFIED="1521986935201" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Business/Services" />
     <SUITE FILE_PATH="coverage/licenta_python$session.coverage" NAME="session Coverage Results" MODIFIED="1521986928320" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/sqlalchemy/orm" />
     <SUITE FILE_PATH="coverage/licenta$Compiler.coverage" NAME="Compiler Coverage Results" MODIFIED="1525530815457" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Presentation" />
@@ -88,54 +85,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Lessons.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Presentation/Lessons.py">
+      <file leaf-file-name="UserLessonDifficulty.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Data/Domain/UserLessonDifficulty.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="55" lean-forward="false" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
+            <state relative-caret-position="323">
+              <caret line="19" column="14" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="14" />
               <folding>
-                <element signature="e#0#44#0" expanded="true" />
+                <element signature="e#0#57#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="editor.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Presentation/templates/editor.html">
+      <file leaf-file-name="EloRatingRepository.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Business/Repositories/EloRatingRepository.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="45" lean-forward="false" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
-              <folding />
+            <state relative-caret-position="102">
+              <caret line="6" column="2" lean-forward="false" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+              <folding>
+                <element signature="e#0#63#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="CompilerService.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Business/Services/CompilerService.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lesson.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Presentation/templates/lesson.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="67">
-              <caret line="30" column="50" lean-forward="false" selection-start-line="30" selection-start-column="50" selection-end-line="30" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list_of_lessons.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Presentation/templates/list_of_lessons.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="27" column="68" lean-forward="false" selection-start-line="27" selection-start-column="68" selection-end-line="27" selection-end-column="68" />
-              <folding />
+            <state relative-caret-position="493">
+              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <folding>
+                <element signature="e#195#288#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -143,23 +124,9 @@
       <file leaf-file-name="Compiler.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Presentation/Compiler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LessonRepository.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Business/Repositories/LessonRepository.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="77" lean-forward="false" selection-start-line="11" selection-start-column="77" selection-end-line="11" selection-end-column="77" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="140">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -174,25 +141,57 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_lesson_service.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/test_lesson_service.py">
+      <file leaf-file-name="LessonRepository.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Business/Repositories/LessonRepository.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="65" lean-forward="false" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
+            <state relative-caret-position="289">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CompilerRepository.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Business/Repositories/CompilerRepository.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="28" column="53" lean-forward="true" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
               <folding>
-                <element signature="e#0#22#0" expanded="true" />
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_user_service.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/test_user_service.py">
+      <file leaf-file-name="UserRepository.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Business/Repositories/UserRepository.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="245">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserService.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Business/Services/UserService.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="27" column="41" lean-forward="false" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
               <folding>
-                <element signature="e#0#22#0" expanded="true" />
+                <element signature="e#283#511#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Lesson.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Data/Domain/Lesson.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="313">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#46#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -223,7 +222,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Presentation/templates/security/login_user.ipynb" />
         <option value="$PROJECT_DIR$/Presentation/templates/security/login_user.html" />
         <option value="$PROJECT_DIR$/Utils/Forms/ExtendedRegisterForm.py" />
         <option value="$PROJECT_DIR$/Presentation/templates/security/register.html" />
@@ -245,35 +243,36 @@
         <option value="$PROJECT_DIR$/Presentation/templates/Compiler.py" />
         <option value="$PROJECT_DIR$/Presentation/Server.py" />
         <option value="$PROJECT_DIR$/Presentation/script.py" />
-        <option value="$PROJECT_DIR$/Presentation/Compiler.py" />
-        <option value="$PROJECT_DIR$/Business/Services/CompilerService.py" />
         <option value="$PROJECT_DIR$/Presentation/static/css/editor.css" />
-        <option value="$PROJECT_DIR$/Presentation/static/js/send_code_to_server.js" />
-        <option value="$PROJECT_DIR$/Business/Repositories/CompilerAuxFiles/script.py" />
-        <option value="$PROJECT_DIR$/dummy testing/test.py" />
         <option value="$PROJECT_DIR$/Presentation/static/css/dashboard.css" />
-        <option value="$PROJECT_DIR$/Business/Repositories/CompilerRepository.py" />
-        <option value="$PROJECT_DIR$/Data/Domain/UserLessonDifficulty.py" />
-        <option value="$PROJECT_DIR$/Data/Domain/Lesson.py" />
-        <option value="$PROJECT_DIR$/Business/Services/UserService.py" />
         <option value="$PROJECT_DIR$/Tests/UserServiceTest.py" />
-        <option value="$PROJECT_DIR$/Data/Domain/User.py" />
-        <option value="$PROJECT_DIR$/Data/Persistance/database.py" />
-        <option value="$PROJECT_DIR$/Tests/test_user_service.py" />
-        <option value="$PROJECT_DIR$/Business/Repositories/UserRepository.py" />
         <option value="$PROJECT_DIR$/Presentation/Courses.py" />
         <option value="$PROJECT_DIR$/Presentation/templates/courses.html" />
         <option value="$PROJECT_DIR$/Presentation/templates/navbar.html" />
         <option value="$PROJECT_DIR$/Presentation/templates/dashboard.html" />
         <option value="$PROJECT_DIR$/Presentation/static/css/list_of_lessons.css" />
         <option value="$PROJECT_DIR$/Business/Services/LessonService.py" />
-        <option value="$PROJECT_DIR$/Business/Repositories/LessonRepository.py" />
         <option value="$PROJECT_DIR$/Tests/test_lesson_service.py" />
         <option value="$PROJECT_DIR$/Presentation/Lessons.py" />
         <option value="$PROJECT_DIR$/Presentation/templates/list_of_lessons.html" />
-        <option value="$PROJECT_DIR$/Presentation/templates/lesson.html" />
-        <option value="$PROJECT_DIR$/Presentation/templates/editor.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/Presentation/templates/lesson.html" />
+        <option value="$PROJECT_DIR$/dummy testing/test.py" />
+        <option value="$PROJECT_DIR$/Data/Domain/User.py" />
+        <option value="$PROJECT_DIR$/Business/Repositories/CompilerRepository.py" />
+        <option value="$PROJECT_DIR$/Tests/test_user_service.py" />
+        <option value="$PROJECT_DIR$/Business/Repositories/CompilerAuxFiles/script.py" />
+        <option value="$PROJECT_DIR$/Business/Services/UserService.py" />
+        <option value="$PROJECT_DIR$/Business/Repositories/LessonRepository.py" />
+        <option value="$PROJECT_DIR$/Data/Persistance/database.py" />
+        <option value="$PROJECT_DIR$/Presentation/templates/editor.html" />
+        <option value="$PROJECT_DIR$/Presentation/static/js/send_code_to_server.js" />
+        <option value="$PROJECT_DIR$/Data/Domain/UserLessonDifficulty.py" />
+        <option value="$PROJECT_DIR$/Business/Services/CompilerService.py" />
+        <option value="$PROJECT_DIR$/Presentation/Compiler.py" />
+        <option value="$PROJECT_DIR$/Data/Domain/Lesson.py" />
+        <option value="$PROJECT_DIR$/Business/Repositories/EloRatingRepository.py" />
+        <option value="$PROJECT_DIR$/Business/Repositories/UserRepository.py" />
       </list>
     </option>
   </component>
@@ -283,10 +282,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="628" />
-    <option name="y" value="61" />
-    <option name="width" value="1239" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="328" />
+    <option name="width" value="1279" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -307,14 +305,89 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="licenta" type="b2602c69:ProjectViewProjectNode" />
               <item name="licenta" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licenta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licenta" type="462c0819:PsiDirectoryNode" />
+              <item name="Business" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licenta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licenta" type="462c0819:PsiDirectoryNode" />
+              <item name="Business" type="462c0819:PsiDirectoryNode" />
+              <item name="Repositories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licenta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licenta" type="462c0819:PsiDirectoryNode" />
+              <item name="Business" type="462c0819:PsiDirectoryNode" />
+              <item name="Repositories" type="462c0819:PsiDirectoryNode" />
+              <item name="CompilerAuxFiles" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licenta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licenta" type="462c0819:PsiDirectoryNode" />
+              <item name="Business" type="462c0819:PsiDirectoryNode" />
+              <item name="Services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licenta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licenta" type="462c0819:PsiDirectoryNode" />
+              <item name="Data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licenta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licenta" type="462c0819:PsiDirectoryNode" />
+              <item name="Data" type="462c0819:PsiDirectoryNode" />
+              <item name="Domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licenta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licenta" type="462c0819:PsiDirectoryNode" />
+              <item name="Data" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licenta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licenta" type="462c0819:PsiDirectoryNode" />
+              <item name="dummy testing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licenta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licenta" type="462c0819:PsiDirectoryNode" />
+              <item name="Presentation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licenta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licenta" type="462c0819:PsiDirectoryNode" />
+              <item name="Presentation" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licenta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licenta" type="462c0819:PsiDirectoryNode" />
+              <item name="Presentation" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licenta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licenta" type="462c0819:PsiDirectoryNode" />
+              <item name="Presentation" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licenta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licenta" type="462c0819:PsiDirectoryNode" />
+              <item name="Tests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -356,22 +429,24 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Nosetests for test_lesson_service.LessonServiceTest.test_get_lessons_ordered_by_id">
-    <configuration name="Nosetests for test_lesson_service.LessonServiceTest.test_get_lessons_ordered_by_id" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.Server">
+    <configuration name="EloRatingRepository" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Business/Repositories" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="licenta_python" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="_new_regexPattern" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_lesson_service.LessonServiceTest.test_get_lessons_ordered_by_id&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Business/Repositories/EloRatingRepository.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <configuration name="Nosetests for test_user_service.UserServiceTest" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -389,7 +464,7 @@
       <option name="_new_target" value="&quot;test_user_service.UserServiceTest&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
-    <configuration name="Nosetests for test_user_service.UserServiceTest.test_get_user_by_id" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
+    <configuration name="Nosetests in test_user_service.py" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -402,23 +477,7 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="_new_regexPattern" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_user_service.UserServiceTest.test_get_user_by_id&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-    </configuration>
-    <configuration name="Nosetests in test_lesson_service.py" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="licenta_python" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="_new_regexPattern" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/Tests/test_lesson_service.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/Tests/test_user_service.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <configuration name="Server" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -434,7 +493,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="licenta_python" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\Lenovo\Documents\GitHub\licenta\Presentation\Server.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Presentation/Server.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -457,21 +516,39 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
+    <configuration name="script" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Business/Repositories/CompilerAuxFiles" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="licenta_python" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Business/Repositories/CompilerAuxFiles/script.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.licenta_python" />
-      <item index="1" class="java.lang.String" itemvalue="Python.Server" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Nosetests in test_user_service.py" />
       <item index="2" class="java.lang.String" itemvalue="Python tests.Nosetests for test_user_service.UserServiceTest" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Nosetests for test_user_service.UserServiceTest.test_get_user_by_id" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Nosetests in test_lesson_service.py" />
-      <item index="5" class="java.lang.String" itemvalue="Python tests.Nosetests for test_lesson_service.LessonServiceTest.test_get_lessons_ordered_by_id" />
+      <item index="3" class="java.lang.String" itemvalue="Python.script" />
+      <item index="4" class="java.lang.String" itemvalue="Python.Server" />
+      <item index="5" class="java.lang.String" itemvalue="Python.EloRatingRepository" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Nosetests for test_lesson_service.LessonServiceTest.test_get_lessons_ordered_by_id" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Nosetests in test_lesson_service.py" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Server" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Nosetests for test_user_service.UserServiceTest" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Nosetests for test_user_service.UserServiceTest.test_get_user_by_id" />
+        <item index="0" class="java.lang.String" itemvalue="Python.Server" />
+        <item index="1" class="java.lang.String" itemvalue="Python.EloRatingRepository" />
+        <item index="2" class="java.lang.String" itemvalue="Python.script" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Nosetests in test_user_service.py" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Nosetests for test_user_service.UserServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -497,35 +574,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Nosetests_for_test_lesson_service_LessonServiceTest_test_get_lessons_ordered_by_id - 2018.05.11 at 00h 37m 20s.xml">
-      <configuration name="Nosetests for test_lesson_service.LessonServiceTest.test_get_lessons_ordered_by_id" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Nosetests_for_test_lesson_service_LessonServiceTest_test_get_lessons_ordered_by_id - 2018.05.11 at 00h 38m 43s.xml">
-      <configuration name="Nosetests for test_lesson_service.LessonServiceTest.test_get_lessons_ordered_by_id" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Nosetests_for_test_lesson_service_LessonServiceTest_test_get_lessons_ordered_by_id - 2018.05.11 at 00h 38m 54s.xml">
-      <configuration name="Nosetests for test_lesson_service.LessonServiceTest.test_get_lessons_ordered_by_id" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Nosetests_for_test_user_service_UserServiceTest - 2018.05.10 at 23h 54m 17s.xml">
+    <history-entry file="Nosetests_for_test_user_service_UserServiceTest - 2018.05.12 at 00h 18m 34s.xml">
       <configuration name="Nosetests for test_user_service.UserServiceTest" configurationId="tests" />
     </history-entry>
-    <history-entry file="Nosetests_for_test_user_service_UserServiceTest - 2018.05.11 at 00h 02m 39s.xml">
+    <history-entry file="Nosetests_for_test_user_service_UserServiceTest - 2018.05.12 at 00h 18m 39s.xml">
       <configuration name="Nosetests for test_user_service.UserServiceTest" configurationId="tests" />
     </history-entry>
-    <history-entry file="Nosetests_for_test_user_service_UserServiceTest - 2018.05.11 at 00h 02m 51s.xml">
+    <history-entry file="Nosetests_for_test_user_service_UserServiceTest - 2018.05.12 at 00h 18m 42s.xml">
       <configuration name="Nosetests for test_user_service.UserServiceTest" configurationId="tests" />
     </history-entry>
-    <history-entry file="Nosetests_for_test_user_service_UserServiceTest - 2018.05.11 at 00h 03m 08s.xml">
+    <history-entry file="Nosetests_for_test_user_service_UserServiceTest - 2018.05.12 at 00h 21m 29s.xml">
       <configuration name="Nosetests for test_user_service.UserServiceTest" configurationId="tests" />
     </history-entry>
-    <history-entry file="Nosetests_for_test_user_service_UserServiceTest - 2018.05.11 at 00h 03m 58s.xml">
+    <history-entry file="Nosetests_for_test_user_service_UserServiceTest - 2018.05.12 at 00h 22m 08s.xml">
       <configuration name="Nosetests for test_user_service.UserServiceTest" configurationId="tests" />
     </history-entry>
-    <history-entry file="Nosetests_in_test_lesson_service_py - 2018.05.11 at 00h 36m 13s.xml">
-      <configuration name="Nosetests in test_lesson_service.py" configurationId="tests" />
+    <history-entry file="Nosetests_for_test_user_service_UserServiceTest - 2018.05.12 at 00h 22m 39s.xml">
+      <configuration name="Nosetests for test_user_service.UserServiceTest" configurationId="tests" />
     </history-entry>
-    <history-entry file="Nosetests_in_test_lesson_service_py - 2018.05.11 at 00h 36m 54s.xml">
-      <configuration name="Nosetests in test_lesson_service.py" configurationId="tests" />
+    <history-entry file="Nosetests_for_test_user_service_UserServiceTest_test_get_user_by_id - 2018.05.12 at 00h 18m 14s.xml">
+      <configuration name="Nosetests for test_user_service.UserServiceTest.test_get_user_by_id" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_test_user_service_py - 2018.05.12 at 00h 18m 24s.xml">
+      <configuration name="Nosetests in test_user_service.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_test_user_service_py - 2018.05.12 at 00h 22m 34s.xml">
+      <configuration name="Nosetests in test_user_service.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_test_user_service_py - 2018.05.12 at 00h 22m 46s.xml">
+      <configuration name="Nosetests in test_user_service.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -538,19 +615,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
+    <frame x="328" y="0" width="1279" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.49485862" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32928476" sideWeight="0.49485862" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36666667" sideWeight="0.29048842" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37066665" sideWeight="0.7095116" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32523617" sideWeight="0.8374036" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37516868" sideWeight="0.7095116" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.324" sideWeight="0.8374036" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.324" sideWeight="0.4922879" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294347" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22133334" sideWeight="0.90616965" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28984576" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21903199" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32666665" sideWeight="0.4974293" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294347" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32793522" sideWeight="0.4974293" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3954116" sideWeight="0.6606684" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -560,6 +636,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294347" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
@@ -619,33 +696,21 @@
           <line>25</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Business/Repositories/EloRatingRepository.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="28" />
+      <option name="time" value="35" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="lesson.user_lesson_difficulty.0.elo_rating" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/flask_login/mixins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="8" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/flask_login/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/flask/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26724">
-          <caret line="1597" column="0" lean-forward="false" selection-start-line="1597" selection-start-column="0" selection-end-line="1597" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/pycharm.jar!/resources/html5-schema/html5/common.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -654,13 +719,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Presentation/static/css/defaults.css" />
-    <entry file="file://$PROJECT_DIR$/Presentation/templates/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Presentation/templates/register.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -688,7 +746,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
           <caret line="38" column="1" lean-forward="false" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -696,7 +753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="29" column="4" lean-forward="false" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -704,23 +760,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Presentation/static/js/send_code_to_server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="56" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="64" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Business/Repositories/CompilerAuxFiles/script.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="4" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -728,7 +767,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="15" lean-forward="false" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -744,19 +782,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="1545" column="0" lean-forward="false" selection-start-line="1545" selection-start-column="0" selection-end-line="1545" selection-end-column="0" />
-          <folding>
-            <marker date="1525269010200" expanded="true" signature="42685:42705" ph="ALTER TABLE missing_value... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dummy testing/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#52#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -764,7 +789,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -772,7 +796,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -780,25 +803,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Business/Services/CompilerService.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="66" lean-forward="false" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/Domain/Role.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -806,27 +810,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-312">
           <caret line="111" column="8" lean-forward="false" selection-start-line="111" selection-start-column="8" selection-end-line="111" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/Domain/Lesson.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#46#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Business/Repositories/CompilerRepository.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#9#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -838,67 +821,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Data/Domain/User.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-119">
-          <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/Persistance/database.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="41" lean-forward="false" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#36#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/unittest/case.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="1369" column="0" lean-forward="true" selection-start-line="1369" selection-start-column="0" selection-end-line="1369" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Business/Services/UserService.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="24" column="48" lean-forward="true" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#63#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Business/Repositories/UserRepository.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="42" lean-forward="false" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/Domain/UserLessonDifficulty.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="49" lean-forward="true" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/sqlalchemy/orm/query.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
           <caret line="1535" column="8" lean-forward="false" selection-start-line="1535" selection-start-column="8" selection-end-line="1535" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -906,15 +832,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="42" lean-forward="false" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Presentation/templates/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="111" lean-forward="false" selection-start-line="10" selection-start-column="111" selection-end-line="10" selection-end-column="111" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -922,55 +839,169 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="35" column="1" lean-forward="false" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Presentation/templates/list_of_lessons.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="68" lean-forward="false" selection-start-line="27" selection-start-column="68" selection-end-line="27" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Presentation/Lessons.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="20" column="55" lean-forward="false" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#44#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Presentation/templates/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="111" lean-forward="false" selection-start-line="10" selection-start-column="111" selection-end-line="10" selection-end-column="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Presentation/templates/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dummy testing/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="1364" column="0" lean-forward="false" selection-start-line="1364" selection-start-column="0" selection-end-line="1364" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/werkzeug/local.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1067">
+          <caret line="291" column="8" lean-forward="false" selection-start-line="291" selection-start-column="8" selection-end-line="291" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/flask_login/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="25" column="19" lean-forward="true" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Business/Repositories/CompilerAuxFiles/script.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Presentation/templates/lesson.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="44" column="21" lean-forward="false" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Presentation/Server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="6" column="42" lean-forward="true" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/Domain/Role.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/test_lesson_service.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="15" column="65" lean-forward="false" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/test_user_service.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Presentation/Authentication.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="39" column="53" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state relative-caret-position="289">
+          <caret line="44" column="16" lean-forward="false" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="36" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Presentation/Server.py">
+    <entry file="file://$PROJECT_DIR$/Presentation/static/js/send_code_to_server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="42" column="48" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        <state relative-caret-position="221">
+          <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!block;n#set_editor_options#0" expanded="false" />
+            <element signature="n#!!block;n#httpGetAsync#0" expanded="false" />
+            <element signature="n#!!block;n#render_output_to_console#0" expanded="false" />
+            <element signature="n#!!block;n#test_code#0" expanded="false" />
+            <element signature="n#!!block;n#submit_code#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Presentation/templates/editor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="12" column="101" lean-forward="false" selection-start-line="12" selection-start-column="101" selection-end-line="12" selection-end-column="101" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Business/Repositories/LessonRepository.py">
+    <entry file="file://$PROJECT_DIR$/Data/Persistance/database.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="77" lean-forward="false" selection-start-line="11" selection-start-column="77" selection-end-line="11" selection-end-column="77" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="4" column="80" lean-forward="false" selection-start-line="4" selection-start-column="80" selection-end-line="7" selection-end-column="54" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/test_user_service.py">
+    <entry file="file://$PROJECT_DIR$/Data/Domain/User.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/test_lesson_service.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="65" lean-forward="false" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="2" column="39" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -982,55 +1013,87 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Business/Services/UserService.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="27" column="41" lean-forward="false" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
+          <folding>
+            <element signature="e#283#511#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Business/Repositories/CompilerRepository.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="28" column="53" lean-forward="true" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/Domain/UserLessonDifficulty.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="14" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Business/Services/CompilerService.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <element signature="e#195#288#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Presentation/Compiler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="140">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/Domain/Lesson.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#46#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Presentation/Lessons.py">
+    <entry file="file://$PROJECT_DIR$/Business/Repositories/UserRepository.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="55" lean-forward="false" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
+        <state relative-caret-position="245">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Business/Repositories/LessonRepository.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Business/Repositories/EloRatingRepository.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="2" lean-forward="false" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
           <folding>
-            <element signature="e#0#44#0" expanded="true" />
+            <element signature="e#0#63#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Presentation/templates/list_of_lessons.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="27" column="68" lean-forward="false" selection-start-line="27" selection-start-column="68" selection-end-line="27" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Presentation/templates/lesson.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="30" column="50" lean-forward="false" selection-start-line="30" selection-start-column="50" selection-end-line="30" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Presentation/templates/editor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="45" lean-forward="false" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>

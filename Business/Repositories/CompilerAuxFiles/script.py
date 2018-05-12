@@ -1,1 +1,2 @@
-print("Hello World!")
+# Try printing something by yourself
+ error

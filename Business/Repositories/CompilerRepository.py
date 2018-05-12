@@ -2,7 +2,6 @@ import os
 from subprocess import Popen, PIPE
 
 
-
 class CompilerRepository:
     _compiler_aux_files_dir = os.path.join(os.path.dirname(__file__), 'CompilerAuxFiles')
     _filename = os.path.join(_compiler_aux_files_dir, 'script.py')

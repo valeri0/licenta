@@ -1,11 +1,13 @@
 from sqlalchemy import Column, Integer, String
+from sqlalchemy.orm import relationship
 
 from Data.Persistance.database import Base
 from sqlalchemy.dialects.mysql import MEDIUMTEXT
 
+from Data.Domain.UserLessonDifficulty import UserLessonDifficulty
+
 
 class Lesson(Base):
-
     __tablename__ = 'lesson'
 
     id = Column(Integer(), primary_key=True)
@@ -21,3 +23,5 @@ class Lesson(Base):
 
     # starting source code of the lesson, that the user will complete on it
     source_code = Column(MEDIUMTEXT())
+
+    user_lesson_difficulty = relationship(UserLessonDifficulty, uselist=False)

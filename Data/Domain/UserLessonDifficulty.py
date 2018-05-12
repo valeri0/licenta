@@ -1,11 +1,13 @@
-from sqlalchemy import Column, Integer, ForeignKey
+from sqlalchemy import Column, Integer, ForeignKey, Float
+from sqlalchemy.orm import relationship
 
 from Data.Persistance.database import Base
+from Data.Domain.User import User
 
 
 class UserLessonDifficulty(Base):
     """
-    Class used to link a :class:`User` to a :class:`Lesson`
+    Used to link a :class:`User` to a :class:`Lesson`
     and have a custom difficulty (Elo rating) between them
 
     Example: We want that each user to have the same lessons,
@@ -15,4 +17,4 @@ class UserLessonDifficulty(Base):
     __tablename__ = 'user_lesson_difficulty'
     user_id = Column(Integer, ForeignKey("user.id"),primary_key=True)
     lesson_id = Column(Integer, ForeignKey("lesson.id"),primary_key=True)
-    elo_rating = Column(Integer(),nullable=False)
+    elo_rating = Column(Float(),nullable=False)

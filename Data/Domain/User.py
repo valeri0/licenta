@@ -2,7 +2,7 @@ from Data.Persistance.database import Base
 from flask_security import UserMixin, RoleMixin
 from sqlalchemy.orm import relationship, backref
 from sqlalchemy import Boolean, DateTime, Column, Integer, \
-    String, ForeignKey
+    String, ForeignKey, Float
 
 from flask.ext import bcrypt
 
@@ -13,7 +13,7 @@ class User(Base, UserMixin):
     name = Column(String(50))
     email = Column(String(100), unique=True)
     password = Column(String(512))
-    elo_rating = Column(Integer())
+    elo_rating = Column(Float())
     active = Column(Boolean())
     role_id = Column(Integer(), ForeignKey('role.id'))
     role = relationship('Role')

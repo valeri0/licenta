@@ -16,4 +16,6 @@ class UserServiceTest(TestCase):
         a = self.user_service.get_user_by_id(1)
         self.assertIsNotNone(self.user_service.get_user_by_id(1))
 
-
+    def test(self):
+        usr = self.user_service.get_current_user()
+        self.assertIsNotNone(usr)

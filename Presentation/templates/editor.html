@@ -7,10 +7,10 @@
     </textarea>
 
    <div id="buttons">
-  <button id="test-button" class="btn waves-effect waves-light  indigo darken-3" type="submit" name="action">Test
+  <button id="test-button" class="btn waves-effect waves-light  indigo darken-3" onclick="test_code({{ lesson.id }})" type="submit" name="action">Test
     <i class="material-icons right"></i>
   </button>
-  <button id="submit-button" class="btn waves-effect waves-light red lighten-1" type="submit" name="action">Submit
+  <button id="submit-button" class="btn waves-effect waves-light red lighten-1" onclick="submit_code({{ lesson.id }})" type="submit" name="action">Submit
     <i class="material-icons right"></i>
   </button>
 
