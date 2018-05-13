@@ -8,5 +8,5 @@ from sqlalchemy import Boolean, DateTime, Column, Integer, \
 class Role(Base, RoleMixin):
     __tablename__ = 'role'
     id = Column(Integer(), primary_key=True)
-    name = Column(String(80), unique=True)
+    name = Column(String(80))
     description = Column(String(255))

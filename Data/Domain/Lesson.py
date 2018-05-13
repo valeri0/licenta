@@ -25,3 +25,6 @@ class Lesson(Base):
     source_code = Column(MEDIUMTEXT())
 
     user_lesson_difficulty = relationship(UserLessonDifficulty, uselist=False)
+
+    def is_completed(self):
+        return self.user_lesson_difficulty.completed

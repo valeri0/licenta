@@ -26,7 +26,6 @@ class CompilerService:
 
         result = self.get_result_from_execution(source_code)
 
-        # TODO: evaluate the submitted code and update the elo ratings of user and lesson
         if result[1] == 200:
             self._elo_rating_repository.user_wins(lesson_id)
         else:

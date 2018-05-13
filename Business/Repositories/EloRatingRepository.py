@@ -4,7 +4,6 @@ from Data.Persistance.database import db_session
 import elo
 
 
-# TODO: Properly complete the repository, according with the business logic
 class EloRatingRepository:
     _user_repository = UserRepository()
     _lesson_repository = LessonRepository()
@@ -21,20 +20,32 @@ class EloRatingRepository:
         return user, lesson
 
     def lesson_wins(self, lesson_id):
+
         user, lesson = self._get_user_and_lesson_entities(lesson_id)
-        elo_lesson,elo_user = self._get_elo_ratings(lesson.user_lesson_difficulty.elo_rating,user.elo_rating)
 
-        user.elo_rating = elo_user
-        lesson.user_lesson_difficulty.elo_rating = elo_lesson
+        if not lesson.is_completed():
 
-        self.db_context.commit()
+            elo_lesson,elo_user = self._get_elo_ratings(lesson.user_lesson_difficulty.elo_rating,user.elo_rating)
+
+            user.elo_rating = elo_user
+            lesson.user_lesson_difficulty.elo_rating = elo_lesson
+
+            self.db_context.commit()
 
     def user_wins(self, lesson_id):
+
+
+
         user,lesson = self._get_user_and_lesson_entities(lesson_id)
-        elo_user,elo_lesson = self._get_elo_ratings(user.elo_rating,lesson.user_lesson_difficulty.elo_rating)
 
-        user.elo_rating = elo_user
-        lesson.user_lesson_difficulty.elo_rating = elo_lesson
+        if not lesson.is_completed():
 
-        self.db_context.commit()
+            elo_user,elo_lesson = self._get_elo_ratings(user.elo_rating,lesson.user_lesson_difficulty.elo_rating)
+
+            user.elo_rating = elo_user
+            lesson.user_lesson_difficulty.elo_rating = elo_lesson
+
+            self._lesson_repository.mark_lesson_as_completed(lesson_id)
+
+            self.db_context.commit()
 

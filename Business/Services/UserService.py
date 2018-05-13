@@ -11,6 +11,7 @@ class UserService:
         user = User()
         user.email = email
         user.password = bcrypt.generate_password_hash(password)
+        user.elo_rating = 1200
 
         role = Role()
         role.name = _role

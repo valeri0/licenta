@@ -16,3 +16,7 @@ class LessonRepository:
         # return Lesson.query.filter_by(id=lesson_id,
         pass
 
+    def mark_lesson_as_completed(self, lesson_id):
+        lesson = self.get_lesson_by_id(lesson_id)
+        lesson.user_lesson_difficulty.completed = 1
+        self._db_context.commit()

@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, ForeignKey, Float
+from sqlalchemy import Column, Integer, ForeignKey, Float, Boolean
 from sqlalchemy.orm import relationship
 
 from Data.Persistance.database import Base
@@ -15,6 +15,7 @@ class UserLessonDifficulty(Base):
     """
 
     __tablename__ = 'user_lesson_difficulty'
-    user_id = Column(Integer, ForeignKey("user.id"),primary_key=True)
-    lesson_id = Column(Integer, ForeignKey("lesson.id"),primary_key=True)
-    elo_rating = Column(Float(),nullable=False)
+    user_id = Column(Integer, ForeignKey("user.id"), primary_key=True)
+    lesson_id = Column(Integer, ForeignKey("lesson.id"), primary_key=True)
+    elo_rating = Column(Float(), nullable=False)
+    completed = Column(Boolean(), default=False)
