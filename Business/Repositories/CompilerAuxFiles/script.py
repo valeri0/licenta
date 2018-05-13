@@ -1,4 +1,2 @@
-# Try printing something by yourself
-
-
-print(None)
+a = 23
+print(a)

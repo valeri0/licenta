@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, Float
 from sqlalchemy.orm import relationship
 
 from Data.Persistance.database import Base
@@ -25,6 +25,8 @@ class Lesson(Base):
     source_code = Column(MEDIUMTEXT())
 
     user_lesson_difficulty = relationship(UserLessonDifficulty, uselist=False)
+
+    default_elo_rating = Column(Float())
 
     def is_completed(self):
         return self.user_lesson_difficulty.completed
