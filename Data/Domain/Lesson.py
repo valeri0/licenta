@@ -1,10 +1,11 @@
 from sqlalchemy import Column, Integer, String, Float
-from sqlalchemy.orm import relationship
+from sqlalchemy.orm import relationship, backref
 
 from Data.Persistance.database import Base
 from sqlalchemy.dialects.mysql import MEDIUMTEXT
 
 from Data.Domain.UserLessonDifficulty import UserLessonDifficulty
+from Data.Domain.Chapter import Chapter
 
 
 class Lesson(Base):
@@ -27,6 +28,8 @@ class Lesson(Base):
     user_lesson_difficulty = relationship(UserLessonDifficulty, uselist=False)
 
     default_elo_rating = Column(Float())
+
+    foreign_keys=[]
 
     def is_completed(self):
         return self.user_lesson_difficulty.completed

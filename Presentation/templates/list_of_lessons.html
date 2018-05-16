@@ -23,10 +23,19 @@
     <ul class="collection">
         {% for lesson in lessons %}
             <li class="collection-item avatar">
-      <i class="material-icons circle">code</i>
-      <p>{{ lesson.title }}</p>
-      <a href="/lesson/{{ lesson.id }}" class="secondary-content">go</a>
-    </li>
+{#              <i class="material-icons circle">code</i>#}
+              <p>{{ lesson.title }}</p>
+              <a href="/lesson/{{ lesson.id }}" class="secondary-content">go</a>
+                {% if lesson.is_completed() %}
+
+                      <i class="material-icons circle green">check</i>
+
+                {% else %}
+
+                       <i class="material-icons circle">code</i>
+
+                {% endif %}
+            </li>
         {% endfor %}
 
 

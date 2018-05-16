@@ -24,3 +24,6 @@ class UserRepository:
             return current_user.id
         else:
             return None
+
+    def get_user_by_email(self,_email):
+        return User.query.filter(User.email == _email).first()

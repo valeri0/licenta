@@ -1,9 +1,5 @@
 from sqlalchemy import Column, Integer, ForeignKey, Float, Boolean
-from sqlalchemy.orm import relationship
-
 from Data.Persistance.database import Base
-from Data.Domain.User import User
-
 
 class UserLessonDifficulty(Base):
     """

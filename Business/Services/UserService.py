@@ -1,3 +1,4 @@
+from Business.Repositories.LessonRepository import LessonRepository
 from Business.Repositories.UserRepository import UserRepository
 from Data.Domain.User import User
 from Data.Domain.Role import Role
@@ -6,6 +7,7 @@ from flask.ext import bcrypt
 
 class UserService:
     __user_repository = UserRepository()
+    __lesson_repository = LessonRepository()
 
     def create_user(self, email, password, _role):
         user = User()
@@ -18,6 +20,7 @@ class UserService:
         user.role = role
 
         self.__user_repository.create_user(user)
+        self.__lesson_repository.assign_every_lesson_to_a_user(self.get_user_by_email(email).id)
 
     def logout_user(self,user):
         self.__user_repository.create_user(user)
@@ -27,3 +30,6 @@ class UserService:
 
     def get_current_user_id(self):
         return self.get_current_user_id()
+
+    def get_user_by_email(self,_email):
+        return self.__user_repository.get_user_by_email(_email)

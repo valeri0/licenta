@@ -3,3 +3,6 @@
 *.iml
 *.mako
 *.ini
+*.xml
+*.pyc
+*.pyc

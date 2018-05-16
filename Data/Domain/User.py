@@ -4,6 +4,8 @@ from sqlalchemy.orm import relationship, backref
 from sqlalchemy import Boolean, DateTime, Column, Integer, \
     String, ForeignKey, Float
 
+from Data.Domain.Role import Role
+
 from flask.ext import bcrypt
 
 
@@ -16,7 +18,7 @@ class User(Base, UserMixin):
     elo_rating = Column(Float())
     active = Column(Boolean())
     role_id = Column(Integer(), ForeignKey('role.id'))
-    role = relationship('Role')
+    role = relationship(Role)
     is_authenticated = True
 
     def is_authenticated(self):
