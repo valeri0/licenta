@@ -20,26 +20,36 @@
 <div class="container">
 
 
-    <ul class="collection">
-        {% for lesson in lessons %}
-            <li class="collection-item avatar">
+{#    <ul class="collection">#}
+{#        {% for lesson in lessons %}#}
+{#            <li class="collection-item avatar">#}
 {#              <i class="material-icons circle">code</i>#}
-              <p>{{ lesson.title }}</p>
-              <a href="/lesson/{{ lesson.id }}" class="secondary-content">go</a>
-                {% if lesson.is_completed() %}
+{#              <p>{{ lesson.title }}</p>#}
+{#              <a href="/lesson/{{ lesson.id }}" class="secondary-content">go</a>#}
+{#                {% if lesson.is_completed() %}#}
+{##}
+{#                      <i class="material-icons circle green">check</i>#}
+{##}
+{#                {% else %}#}
+{##}
+{#                       <i class="material-icons circle">code</i>#}
+{##}
+{#                {% endif %}#}
+{#            </li>#}
+{#        {% endfor %}#}
+{##}
+{##}
+{#  </ul>#}
 
-                      <i class="material-icons circle green">check</i>
 
-                {% else %}
-
-                       <i class="material-icons circle">code</i>
-
-                {% endif %}
-            </li>
-        {% endfor %}
-
-
-  </ul>
+      <ul class="collection with-header">
+          {% for chapter in chapter_lessons if chapter|length > 1 %}
+                <li class="collection-header"><h4> {{ chapter[0].title }}</h4></li>
+                {% for lesson in chapter[1:] %}
+                    <a href="/lesson/{{ lesson.id }}"><li class="collection-item">{{ lesson.title }}</li></a>
+                {% endfor  %}
+          {% endfor %}
+      </ul>
 
 </div>
 

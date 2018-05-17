@@ -16,3 +16,17 @@ class ChapterServiceTest(TestCase):
         chapters = self.chapter_service.get_all_chapters()
 
         self.assertIsNotNone(chapters)
+
+    def test_get_lessons_by_chapter(self):
+
+        rez = self.chapter_service.get_lessons_by_chapter()
+
+        self.assertIsNotNone(rez)
+
+    def test_get_chapter_by_id(self):
+
+        _id = 1
+
+        chapter = self.chapter_service.get_chapter_by_id(_id)
+
+        self.assertEquals(chapter.id,_id)
