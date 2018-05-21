@@ -1,4 +1,4 @@
-from Data.Persistance.database import Base
+import Data.Persistance.database as db
 from flask_security import UserMixin, RoleMixin
 from sqlalchemy.orm import relationship, backref
 from sqlalchemy import Boolean, DateTime, Column, Integer, \
@@ -9,7 +9,7 @@ from Data.Domain.Role import Role
 from flask.ext import bcrypt
 
 
-class User(Base, UserMixin):
+class User(db.Base, UserMixin):
     __tablename__ = 'user'
     id = Column(Integer(), primary_key=True)
     name = Column(String(50))

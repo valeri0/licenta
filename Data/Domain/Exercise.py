@@ -1,6 +1,6 @@
 from sqlalchemy.orm import relationship, backref
 
-from Data.Persistance.database import Base
+import Data.Persistance.database as db
 from Data.Domain.Chapter import Chapter
 
 from sqlalchemy import Boolean, DateTime, Column, Integer, \
@@ -9,7 +9,7 @@ from sqlalchemy import Boolean, DateTime, Column, Integer, \
 from sqlalchemy.dialects.mysql import MEDIUMTEXT
 
 
-class Exercise(Base):
+class Exercise(db.Base):
     __tablename__ = 'exercise'
     id = Column(Integer(),primary_key=True)
     title = Column(String(50))

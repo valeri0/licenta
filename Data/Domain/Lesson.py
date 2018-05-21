@@ -1,14 +1,14 @@
 from sqlalchemy import Column, Integer, String, Float
 from sqlalchemy.orm import relationship, backref
 
-from Data.Persistance.database import Base
+import Data.Persistance.database as db
 from sqlalchemy.dialects.mysql import MEDIUMTEXT
 
 from Data.Domain.UserLessonDifficulty import UserLessonDifficulty
 from Data.Domain.Chapter import Chapter
 
 
-class Lesson(Base):
+class Lesson(db.Base):
     __tablename__ = 'lesson'
 
     id = Column(Integer(), primary_key=True)

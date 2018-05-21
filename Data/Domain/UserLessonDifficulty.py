@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, ForeignKey, Float, Boolean
-from Data.Persistance.database import Base
+import Data.Persistance.database as db
 
-class UserLessonDifficulty(Base):
+class UserLessonDifficulty(db.Base):
     """
     Used to link a :class:`User` to a :class:`Lesson`
     and have a custom difficulty (Elo rating) between them

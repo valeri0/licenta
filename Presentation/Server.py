@@ -9,11 +9,31 @@ from Data.Utils.RegistrationForm import RegistrationForm
 from Presentation.Authentication import auth
 from Presentation.Lessons import lessons
 from Presentation.Compiler import compiler
+from flask_login import current_user
 
-import json
+from flask_admin import Admin
+from flask_admin.contrib.sqla import ModelView
 
-from flask_login import current_user, login_user
+import Data.Domain.User as user
+from Presentation.AdminView.UserView import UserView
 
+import Data.Domain.Chapter as chapter
+from Presentation.AdminView.ChapterView import ChapterView
+
+import Data.Domain.ChapterLesson as chapter_lesson
+from Presentation.AdminView.ChapterLessonView import ChapterLessonView
+
+import Data.Domain.ChapterExercise as chapter_exercise
+from Presentation.AdminView.ChapterExerciseView import ChapterExerciseView
+
+import Data.Domain.Lesson as lesson
+from Presentation.AdminView.LessonView import LessonView
+
+import Data.Domain.UserLessonDifficulty as user_lesson_difficulty
+from Presentation.AdminView.UserLessonDifficultyView import UserLessonDifficultyView
+
+import Data.Domain.Role as role
+from Presentation.AdminView.RoleView import RoleView
 app = Flask(__name__)
 app.register_blueprint(auth)
 app.register_blueprint(lessons)
@@ -36,6 +56,16 @@ user_repository = UserRepository()
 user_service = UserService()
 security = Security(app, user_repository.get_user_datastore())
 
+admin = Admin(app, name="my app", template_mode="bootstrap3")
+admin.add_view(UserView(user.User, user.db.db_session))
+
+admin.add_view(RoleView(role.Role,role.db.db_session))
+admin.add_view(UserLessonDifficultyView(user_lesson_difficulty.UserLessonDifficulty,user_lesson_difficulty.db.db_session))
+admin.add_view(LessonView(lesson.Lesson,lesson.db.db_session))
+admin.add_view(ChapterExerciseView(chapter_exercise.ChapterExercise,chapter_exercise.db.db_session))
+admin.add_view(ChapterLessonView(chapter_lesson.ChapterLesson,chapter_lesson.db.db_session))
+admin.add_view(ChapterView(chapter.Chapter,chapter.db.db_session))
+
 
 @app.route("/")
 def index():
@@ -45,7 +75,6 @@ def index():
     register_form = RegistrationForm()
     login_form = LoginForm()
     return render_template("register.html", login_form=login_form, register_form=register_form)
-
 
 
 if __name__ == '__main__':
