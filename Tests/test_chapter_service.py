@@ -19,7 +19,7 @@ class ChapterServiceTest(TestCase):
 
     def test_get_lessons_by_chapter(self):
 
-        rez = self.chapter_service.get_lessons_by_chapter()
+        rez = self.chapter_service.get_lessons_grouped_by_chapter_for_view()
 
         self.assertIsNotNone(rez)
 

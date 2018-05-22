@@ -1,6 +1,7 @@
 from Data.Persistance.database import *
 from Data.Domain.Lesson import Lesson
 from Data.Domain.UserLessonDifficulty import UserLessonDifficulty
+from Data.Domain.ChapterLesson import ChapterLesson
 
 
 class LessonRepository:
@@ -16,9 +17,7 @@ class LessonRepository:
         return sorted(Lesson.query.all(), key=lambda a_lesson: a_lesson.id)
 
     def get_elo_rating_of_lesson_for_given_user(self, lesson_id, user_id):
-        # TODO: Get elo rating of lesson for a specified user
-        # return Lesson.query.filter_by(id=lesson_id,
-        pass
+        return UserLessonDifficulty.query.filter_by(lesson_id=lesson_id, user_id=user_id).first().elo_rating
 
     def mark_lesson_as_completed(self, lesson_id):
         lesson = self.get_lesson_by_id(lesson_id)
@@ -38,3 +37,19 @@ class LessonRepository:
             self._db_context.add(user_difficulty)
 
         self._db_context.commit()
+
+    def get_chapter_id_of_lesson(self, lesson_id):
+        return ChapterLesson.query.filter_by(lesson_id=lesson_id).first().chapter_id
+
+    def get_hard_lessons_for_user(self,user_id):
+
+        all_lessons = self.get_all_lessons()
+
+        hard_lessons = [lesson for lesson in all_lessons if self.get_elo_rating_of_lesson_for_given_user(lesson.id,user_id) > lesson.default_elo_rating]
+
+        return hard_lessons
+
+
+
+
+les = LessonRepository()

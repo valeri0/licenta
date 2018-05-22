@@ -19,7 +19,7 @@ class CompilerRepository:
         # os.system("docker container commit --change=\"CMD [\"python\",\"-u\",\"./script.py\"]\" 41da0144ca93 python_machine/test:1")
 
         # run the script.py in the docker container and provide the result
-        proc = Popen('docker run python_machine/test:1', shell=True, stdout=PIPE, stderr=PIPE)
+        proc = Popen('docker run python-machine', shell=True, stdout=PIPE, stderr=PIPE)
 
         # the result is a tuple (a,b) with:
         # a -> the stdout message

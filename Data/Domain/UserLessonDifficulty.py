@@ -15,3 +15,6 @@ class UserLessonDifficulty(db.Base):
     lesson_id = Column(Integer, ForeignKey("lesson.id"), primary_key=True)
     elo_rating = Column(Float(), nullable=False)
     completed = Column(Boolean(), default=False)
+
+    def is_completed(self):
+        return self.completed

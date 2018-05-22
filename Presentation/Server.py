@@ -13,6 +13,8 @@ from flask_login import current_user
 
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
+import Data.Domain.Exercise as exercise
+from Presentation.AdminView.ExerciseView import ExerciseView
 
 import Data.Domain.User as user
 from Presentation.AdminView.UserView import UserView
@@ -34,6 +36,9 @@ from Presentation.AdminView.UserLessonDifficultyView import UserLessonDifficulty
 
 import Data.Domain.Role as role
 from Presentation.AdminView.RoleView import RoleView
+
+import Data.Domain.UserExerciseDifficulty as user_exercise_difficulty
+from Presentation.AdminView.UserExerciseDifficultyView import UserExerciseDifficultyView
 app = Flask(__name__)
 app.register_blueprint(auth)
 app.register_blueprint(lessons)
@@ -65,8 +70,8 @@ admin.add_view(LessonView(lesson.Lesson,lesson.db.db_session))
 admin.add_view(ChapterExerciseView(chapter_exercise.ChapterExercise,chapter_exercise.db.db_session))
 admin.add_view(ChapterLessonView(chapter_lesson.ChapterLesson,chapter_lesson.db.db_session))
 admin.add_view(ChapterView(chapter.Chapter,chapter.db.db_session))
-
-
+admin.add_view(ExerciseView(exercise.Exercise,exercise.db.db_session))
+admin.add_view(UserExerciseDifficultyView(user_exercise_difficulty.UserExerciseDifficulty,user_exercise_difficulty.db.db_session))
 @app.route("/")
 def index():
     if current_user.is_authenticated:

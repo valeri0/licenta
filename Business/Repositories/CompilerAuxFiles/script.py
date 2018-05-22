@@ -1,2 +1,3 @@
-#Remember the print, we've learned a few lessons ago!
-print("sapte")
+# you will find the results are pretty human readable
+print(2<3)
+print(5==5)
