@@ -1,16 +1,21 @@
 
 <div>
+    {% if lesson is defined %}
     <div id="editor">{{ lesson.source_code }}</div>
+    {% endif %}
+    {% if exercise is defined %}
+    <div id="editor"> {{ exercise.source_code }}</div>
+    {% endif %}
 
     <textarea title="console" id = "console" readonly>
 
     </textarea>
 
    <div id="buttons">
-  <button id="test-button" class="btn waves-effect waves-light  indigo darken-3" onclick="test_code({{ lesson.id }})" type="submit" name="action">Test
+  <button id="test-button" class="btn waves-effect waves-light  indigo darken-3" onclick="test_code({{ exercise.id }})" type="submit" name="action">Test
     <i class="material-icons right"></i>
   </button>
-  <button id="submit-button" class="btn waves-effect waves-light red lighten-1" onclick="submit_code({{ lesson.id }})" type="submit" name="action">Submit
+  <button id="submit-button" class="btn waves-effect waves-light red lighten-1" onclick="submit_code({{ exercise.id }})" type="submit" name="action">Submit
     <i class="material-icons right"></i>
   </button>
 

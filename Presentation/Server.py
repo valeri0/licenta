@@ -9,10 +9,12 @@ from Data.Utils.RegistrationForm import RegistrationForm
 from Presentation.Authentication import auth
 from Presentation.Lessons import lessons
 from Presentation.Compiler import compiler
+from Presentation.Exercises import exercises
 from flask_login import current_user
 
 from flask_admin import Admin
-from flask_admin.contrib.sqla import ModelView
+
+
 import Data.Domain.Exercise as exercise
 from Presentation.AdminView.ExerciseView import ExerciseView
 
@@ -39,10 +41,15 @@ from Presentation.AdminView.RoleView import RoleView
 
 import Data.Domain.UserExerciseDifficulty as user_exercise_difficulty
 from Presentation.AdminView.UserExerciseDifficultyView import UserExerciseDifficultyView
+
+
+
+
 app = Flask(__name__)
 app.register_blueprint(auth)
 app.register_blueprint(lessons)
 app.register_blueprint(compiler)
+app.register_blueprint(exercises)
 
 app.config['SECRET_KEY'] = 'super-secret'
 app.config['SECURITY_REGISTERABLE'] = True

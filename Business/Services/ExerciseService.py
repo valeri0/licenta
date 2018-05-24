@@ -1,11 +1,13 @@
 from Business.Repositories.ExerciseRepository import ExerciseRepository
 from Business.Repositories.ChapterRepository import ChapterRepository
-import random
+from Business.Repositories.UserRepository import UserRepository
+import random, elo
 
 
 class ExerciseService:
     _exercise_repository = ExerciseRepository()
     _chapter_repository = ChapterRepository()
+    _user_repository = UserRepository()
 
     def suggest_exercise_for_user(self, user_id):
         # if all the lessons are completed, then a random exercise from all the ones will be generated
@@ -37,6 +39,18 @@ class ExerciseService:
         chapters_with_criteria.sort(key=lambda tup: tup[1])
 
         # TODO: find a treshold which will ignore the chapters, meaning that the user did well on that chapter and is not necessary for exercises
-        treshold = 500
+        treshold = 1000
 
-        all_exercises = self._exercise_repository.get_all_exercises_from_chapter()
+        chapter_id = min(chapters_with_criteria, key=lambda tup: tup[1] < treshold)
+
+        all_exercises = self._exercise_repository.get_all_exercises_from_chapter(chapter_id)
+
+        best_chance_to_win = (0, float('-inf'))
+        user_elo = self._user_repository.get_user_by_id(user_id).elo_rating
+
+        for exercise in all_exercises:
+            chances_for_user_to_do_the_exercise = elo.quality_1vs1(user_elo, exercise.default_elo_rating)
+            if chances_for_user_to_do_the_exercise > best_chance_to_win[1]:
+                best_chance_to_win = (exercise.id, chances_for_user_to_do_the_exercise)
+
+        return self._exercise_repository.get_exercise_by_id(best_chance_to_win[0])

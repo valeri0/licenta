@@ -22,7 +22,7 @@ class ExerciseRepository:
         return [self.get_exercise_by_id(cx.exercise_id) for cx in ChapterExercise.query.filter_by(chapter_id=chapter_id)]
 
     def all_exercises_are_completed_by_user(self, user_id):
-        return all([x.is_completed for x in [self.get_all_exercises_for_user(user_id)]])
+        return all([x.is_completed for x in self.get_all_exercises_for_user(user_id)])
 
     def exercise_is_resolved_by_user(self,user_id,exercise_id):
         return UserExerciseDifficulty.query.filter_by(user_id=user_id,exercise_id=exercise_id).first().completed
