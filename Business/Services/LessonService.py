@@ -1,8 +1,10 @@
 from Business.Repositories.LessonRepository import LessonRepository
+from Business.Services.CompilerService import CompilerService
 
 
 class LessonService:
     _lesson_repository = LessonRepository()
+    _compiler_service = CompilerService()
 
     def get_all_lessons(self):
         return self._lesson_repository.get_all_lessons()
@@ -12,4 +14,10 @@ class LessonService:
 
     def get_lessons_ordered_by_id(self):
         return self._lesson_repository.get_lessons_ordered_by_id()
+
+    def evaluate_submission(self, source_code, source_id):
+        return  self._compiler_service.evaluate_submission(source_code,source_id)
+
+    def get_result_from_execution(self, source_code):
+        return self._compiler_service.get_result_from_execution(source_code)
 

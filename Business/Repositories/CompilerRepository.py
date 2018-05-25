@@ -1,18 +1,24 @@
-import os
+import os,re
 from subprocess import Popen, PIPE
 
 
 class CompilerRepository:
     _compiler_aux_files_dir = os.path.join(os.path.dirname(__file__), 'CompilerAuxFiles')
     _filename = os.path.join(_compiler_aux_files_dir, 'script.py')
+    _snippet_file =  os.path.join(_compiler_aux_files_dir,"snippet_for_function.py")
+
+
 
     def _write_in_file(self, source_code):
         with open(self._filename, "w") as write_file:
             write_file.write(source_code)
 
-    def _run_in_docker(self, source_code):
-        self._write_in_file(source_code)
+    def _append_in_file(self,source_code):
+        with open(self._filename,"a") as append_file:
+            append_file.write("\n")
+            append_file.write(source_code)
 
+    def _run_in_docker(self):
         # building the docker container according to the Dockerfile
         os.system("docker build -t python-machine {}".format(self._compiler_aux_files_dir))
 
@@ -28,5 +34,24 @@ class CompilerRepository:
 
         return result_from_execution
 
-    def get_result_from_execution(self, source_code):
-        return self._run_in_docker(source_code)
+    def evaluate_simple_code_submission(self, source_code):
+        self._write_in_file(source_code)
+        return self._run_in_docker()
+
+    def generalize_function(self,content,general_name):
+        x = re.search("def .+\(", content).group()
+        content = content.replace(x, "def {}(".format(general_name))
+        return content
+
+    def evaluate_function_submitted_by_user(self, source_code, resolved_code):
+
+        source_code = self.generalize_function(source_code,"func_submitted")
+        resolved_code = self.generalize_function(resolved_code,"func_resolved")
+        snippet_for_test_cases = open(self._snippet_file,"r").read()
+        self._write_in_file(source_code)
+        self._append_in_file(resolved_code)
+        self._append_in_file(snippet_for_test_cases)
+
+        return self._run_in_docker()
+
+

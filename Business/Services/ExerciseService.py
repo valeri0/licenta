@@ -1,6 +1,10 @@
+from flask_login import current_user
+
 from Business.Repositories.ExerciseRepository import ExerciseRepository
 from Business.Repositories.ChapterRepository import ChapterRepository
 from Business.Repositories.UserRepository import UserRepository
+from Business.Services.CompilerService import CompilerService
+from Business.Repositories.EloRatingRepository import EloRatingRepository
 import random, elo
 
 
@@ -8,6 +12,9 @@ class ExerciseService:
     _exercise_repository = ExerciseRepository()
     _chapter_repository = ChapterRepository()
     _user_repository = UserRepository()
+    _compiler_service = CompilerService()
+    _elo_rating_repository = EloRatingRepository()
+
 
     def suggest_exercise_for_user(self, user_id):
         # if all the lessons are completed, then a random exercise from all the ones will be generated
@@ -53,4 +60,38 @@ class ExerciseService:
             if chances_for_user_to_do_the_exercise > best_chance_to_win[1]:
                 best_chance_to_win = (exercise.id, chances_for_user_to_do_the_exercise)
 
-        return self._exercise_repository.get_exercise_by_id(best_chance_to_win[0])
+        exercise_to_be_recommended_id = best_chance_to_win[0]
+        if not self._exercise_repository.exercise_has_been_tried_before_by_user(current_user.id,exercise_to_be_recommended_id):
+            self._exercise_repository.create_user_exercise_difficulty_entry(exercise_to_be_recommended_id)
+
+        return self._exercise_repository.get_exercise_by_id(exercise_to_be_recommended_id)
+
+    def get_test_case_factor_from_output(self, message):
+
+        factor = message[len(message) - 4:]
+        return int(factor[0]) / int(factor[2])
+
+    def evaluate_exercise(self,source_code,exercise_id):
+        exercise =  self._exercise_repository.get_exercise_by_id(exercise_id)
+        result_from_execution = self._compiler_service.evaluate_function_submitted_by_user(source_code,exercise.solved_source_code)
+
+        # the execution runs ok
+        if result_from_execution[1] == 200:
+            test_case_factor = self.get_test_case_factor_from_output(result_from_execution[0])
+
+            # the user totally wins
+            if test_case_factor == 1:
+                pass
+
+            # the user loses, even intermedially(the points will be given, for the test that the passed, but the exercise will not be marked as completed)
+            else:
+                pass
+
+        # the execution has errors, which means the user did not succeed the lesson
+        else:
+            pass
+
+
+        return result_from_execution
+
+

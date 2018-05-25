@@ -1,7 +1,18 @@
-import translate
+import elo
+import math
 
-tr = translate.Translator("ro","en")
+elo_lesson = 1000
+elo_user = 1200
 
-x = "Observe the first usage where we use {0} and this corresponds to the variable name which is the first argument to the format method. Similarly, the second specification is {1} corresponding to age which is the second argument to the format method. Note that Python starts counting from 0 which means that first position is at index 0, second position is at index 1, and so on."
-s = tr.translate(x)
-print(s)
+test_case_factor = 9/10
+
+normal_elo = elo.rate_1vs1(elo_lesson,elo_user)
+
+difference = math.fabs(elo_lesson - normal_elo[0])
+
+print(elo_lesson,elo_user)
+print()
+print(normal_elo)
+
+print(elo_lesson + difference - (difference*test_case_factor))
+print(elo_user - difference + (difference*test_case_factor))

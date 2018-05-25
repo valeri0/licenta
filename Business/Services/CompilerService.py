@@ -13,7 +13,7 @@ class CompilerService:
 
     def get_result_from_execution(self, source_code):
 
-        result = self._compiler_repository.get_result_from_execution(source_code)
+        result = self._compiler_repository.evaluate_simple_code_submission(source_code)
 
         # if the in stdout is empty that means the source code submitted has errors
         if not result[0] or not result[0].strip():
@@ -22,13 +22,27 @@ class CompilerService:
         else:
             return result[0].decode('utf-8'), 200
 
-    def evaluate_submission(self, source_code, lesson_id):
+    def evaluate_submission(self, source_code, source_id):
 
         result = self.get_result_from_execution(source_code)
 
         if result[1] == 200:
-            self._elo_rating_repository.user_wins(lesson_id)
+            self._elo_rating_repository.user_wins_over_lesson(source_id)
         else:
-            self._elo_rating_repository.lesson_wins(lesson_id)
+            self._elo_rating_repository.lesson_wins_over_user(source_id, None)
 
         return result
+
+
+
+
+    def evaluate_function_submitted_by_user(self, source_code, resolved_code):
+        # TODO: adjust elo ratings using the test_case factor if the user does not succeed
+
+        result = self._compiler_repository.evaluate_function_submitted_by_user(source_code, resolved_code)
+
+        if not result[0] or not result[0].strip():
+            return _format_output_error_message(result[1]), 500
+            # else, the code has compiled and executed successfully
+        else:
+            return result[0].decode('utf-8'), 200

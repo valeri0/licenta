@@ -12,10 +12,24 @@
     </textarea>
 
    <div id="buttons">
-  <button id="test-button" class="btn waves-effect waves-light  indigo darken-3" onclick="test_code({{ exercise.id }})" type="submit" name="action">Test
+       {% if lesson is defined %}
+  <button id="test-button" class="btn waves-effect waves-light  indigo darken-3" onclick="lesson_test_code({{ lesson.id }})" type="submit" name="action">Test
+      {% endif %}
+
+      {% if exercise is defined %}
+          <button id="test-button" class="btn waves-effect waves-light  indigo darken-3" onclick="exercise_test_code({{ exercise.id }})" type="submit" name="action">Test
+
+      {% endif %}
     <i class="material-icons right"></i>
   </button>
-  <button id="submit-button" class="btn waves-effect waves-light red lighten-1" onclick="submit_code({{ exercise.id }})" type="submit" name="action">Submit
+
+   {% if lesson is defined %}
+         <button id="submit-button" class="btn waves-effect waves-light red lighten-1" onclick="lesson_submit_code({{ lesson.id }})" type="submit" name="action">Submit
+   {% endif %}
+
+   {% if exercise is defined %}
+         <button id="submit-button" class="btn waves-effect waves-light red lighten-1" onclick="exercise_submit_code({{ exercise.id }})" type="submit" name="action">Submit
+   {% endif %}
     <i class="material-icons right"></i>
   </button>
 

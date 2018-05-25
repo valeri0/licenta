@@ -1,5 +1,4 @@
-from flask import Blueprint, render_template
-
+from flask import Blueprint, render_template,request
 from Business.Services.ChapterService import ChapterService
 from Business.Services.LessonService import LessonService
 import json
@@ -22,3 +21,29 @@ def get_lesson_by_id(lesson_id):
     lesson = _lesson_service.get_lesson_by_id(lesson_id)
 
     return render_template("lesson.html",lesson=lesson)
+
+
+@lessons.route("/lesson/test", methods=['POST'])
+def test_code():
+    source_code = request.json['code']
+    execution_response = _lesson_service.get_result_from_execution(source_code)
+
+    response = {
+        'message': str(execution_response[0]),
+        'code': str(execution_response[1])
+    }
+    return json.dumps(response), 200
+
+
+@lessons.route("/lesson/submit", methods=['POST'])
+def submit_code():
+    source_code = request.json['code']
+    lesson_id = request.json['id']
+
+    execution_response = _lesson_service.evaluate_submission(source_code, lesson_id)
+
+    response = {
+        'message': str(execution_response[0]),
+        'code': str(execution_response[1])
+    }
+    return json.dumps(response), 200

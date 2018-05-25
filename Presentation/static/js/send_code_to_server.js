@@ -10,7 +10,7 @@ function set_editor_options(editor){
     document.getElementById('editor').style.fontSize='14px';
 }
 
-function httpGetAsync(theUrl, callback,source_code,lesson_id) {
+function httpGetAsync(theUrl, callback,source_code,id) {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() {
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
@@ -18,7 +18,7 @@ function httpGetAsync(theUrl, callback,source_code,lesson_id) {
     };
     xmlHttp.open("POST", theUrl, true); // true for asynchronous
     xmlHttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-    xmlHttp.send(JSON.stringify({'code':source_code,'lesson_id':lesson_id}));
+    xmlHttp.send(JSON.stringify({'code':source_code,'id':id}));
 }
 
 function render_output_to_console(respone_from_server){
@@ -46,14 +46,14 @@ function render_output_to_console(respone_from_server){
     }
 }
 
-function test_code(lesson_id){
+function lesson_test_code(lesson_id){
 
     editor.getSession().setAnnotations([{}]);
     output_console.classList.add('loading');
     output_console.value='Loading';
 
 
-    httpGetAsync(APP_URL+"code/test",function (response){
+    httpGetAsync(APP_URL+"lesson/test",function (response){
 
         render_output_to_console(response);
     },
@@ -61,19 +61,51 @@ function test_code(lesson_id){
 
 }
 
-function submit_code(lesson_id){
+function lesson_submit_code(lesson_id){
 
     editor.getSession().setAnnotations([{}]);
     output_console.classList.add('loading');
     output_console.value='Loading';
 
 
-    httpGetAsync(APP_URL+"code/submit",function (response){
+    httpGetAsync(APP_URL+"lesson/submit",function (response){
 
         render_output_to_console(response);
     },
         editor.getValue(),lesson_id);
 }
+
+
+function exercise_test_code(exercise_id){
+
+    editor.getSession().setAnnotations([{}]);
+    output_console.classList.add('loading');
+    output_console.value='Loading';
+
+
+    httpGetAsync(APP_URL+"exercise/test",function (response){
+
+        render_output_to_console(response);
+    },
+        editor.getValue(),exercise_id);
+
+}
+
+function exercise_submit_code(exercise_id){
+
+    editor.getSession().setAnnotations([{}]);
+    output_console.classList.add('loading');
+    output_console.value='Loading';
+
+
+    httpGetAsync(APP_URL+"exercise/submit",function (response){
+
+        render_output_to_console(response);
+    },
+        editor.getValue(),exercise_id);
+}
+
+
 
 
 var editor = ace.edit("editor");
