@@ -35,7 +35,14 @@ class ExerciseRepository:
 
 
     def all_exercises_are_completed_by_user(self, user_id):
-        return all([x.is_completed for x in self.get_all_exercises_for_user(user_id)])
+
+        exercises_for_user = self.get_all_exercises_for_user(user_id)
+        total_exercises = self.get_all_exercises()
+
+        if len(total_exercises) == len([exe for exe in exercises_for_user if exe.completed]):
+            return True
+
+        return False
 
     @staticmethod
     def exercise_is_resolved_by_user(user_id, exercise_id):

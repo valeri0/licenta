@@ -16,6 +16,8 @@ class ExerciseService:
     _elo_rating_repository = EloRatingRepository()
 
     def suggest_exercise_for_user(self, user_id):
+        # TODO: Temporary problem with the suggestion, will be fixed when the app will include tasks to complete in order to unlock features such as being able to do exercises after a certain number of lessons are done, as a workaround the user will have all the exercises by one insert, and not inserting step by step
+
         # if all the lessons are completed, then a random exercise from all the ones will be generated
         if self._exercise_repository.all_exercises_are_completed_by_user(user_id):
             all_exercises_id = [ex.id for ex in self._exercise_repository.get_all_exercises()]
@@ -49,10 +51,12 @@ class ExerciseService:
         treshold = 1000
 
         index = 0
-        all_exercises = self._exercise_repository.get_all_resolved_exercises_from_chapter(chapters_with_criteria[index][0])
+        all_exercises = self._exercise_repository.get_all_resolved_exercises_from_chapter(
+            chapters_with_criteria[index][0])
         while len(all_exercises) == 0 and index < len(chapters_with_criteria):
             index = index + 1
-            all_exercises = self._exercise_repository.get_all_resolved_exercises_from_chapter(chapters_with_criteria[index][0])
+            all_exercises = self._exercise_repository.get_all_resolved_exercises_from_chapter(
+                chapters_with_criteria[index][0])
 
         best_chance_to_win = (0, float('-inf'))
         user_elo = self._user_repository.get_user_by_id(user_id).elo_rating

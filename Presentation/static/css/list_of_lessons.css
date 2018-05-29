@@ -34,3 +34,32 @@
   /* Support for IE. */
   font-feature-settings: 'liga';
 }
+
+.collapsible-body, .collapsible, ul.collapsible>li
+{
+  margin: 0!important;;
+  padding: 0!important;
+  border: 0!important;
+  box-shadow: none!important;
+  background: #fff;
+}
+
+.collapsible-header{
+  font-size: 26px;
+}
+
+.collection-item{
+  font-size: 16px;
+}
+
+.collapsible li.disabled .collapsible-body {
+    display: none !important; /*or using id of the app to avoid the use of !important*/
+}
+
+.collapsible li.disabled .collapsible-body {
+    display: none !important; /*or using id of the app to avoid the use of !important*/
+}
+
+.collapsible li.disabled .collapsible-header {
+    background: rgb(221,221,221);
+}

@@ -33,12 +33,7 @@ class CompilerService:
 
         return result
 
-
-
-
     def evaluate_function_submitted_by_user(self, source_code, resolved_code):
-        # TODO: adjust elo ratings using the test_case factor if the user does not succeed
-
         result = self._compiler_repository.evaluate_function_submitted_by_user(source_code, resolved_code)
 
         if not result[0] or not result[0].strip():
