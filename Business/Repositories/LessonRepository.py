@@ -16,8 +16,11 @@ class LessonRepository:
     def get_lessons_ordered_by_id(self):
         return sorted(Lesson.query.all(), key=lambda a_lesson: a_lesson.id)
 
+    def get_user_lesson_difficulty_for_user(self,lesson_id,user_id):
+        return UserLessonDifficulty.query.filter_by(lesson_id=lesson_id, user_id=user_id).first()
+
     def get_elo_rating_of_lesson_for_given_user(self, lesson_id, user_id):
-        return UserLessonDifficulty.query.filter_by(lesson_id=lesson_id, user_id=user_id).first().elo_rating
+        return self.get_user_lesson_difficulty_for_user(lesson_id,user_id).elo_rating
 
     def mark_lesson_as_completed(self, lesson_id):
         lesson = self.get_lesson_by_id(lesson_id)

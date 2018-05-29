@@ -68,20 +68,34 @@ class ChapterRepository:
             [
                 self._lesson_repository.get_elo_rating_of_lesson_for_given_user(lesson.id, user_id) - lesson.default_elo_rating
                 for lesson in lessons
-                if lesson.default_elo_rating - self._lesson_repository.get_elo_rating_of_lesson_for_given_user(lesson.id, user_id) < 0
+                if lesson.default_elo_rating - self._lesson_repository.get_elo_rating_of_lesson_for_given_user(lesson.id, user_id) <= 0
             ]
         )
 
     def get_mean_of_elo_for_user(self, chapter_id, user_id):
         lessons = self.get_lessons_by_chapter_id(chapter_id)
-        return mean(
-            [
-                self._lesson_repository.get_elo_rating_of_lesson_for_given_user(lesson.id,user_id) - lesson.default_elo_rating
-                for lesson in lessons
-                if lesson.default_elo_rating - self._lesson_repository.get_elo_rating_of_lesson_for_given_user(lesson.id,user_id) < 0
 
-             ]
-        )
+        aux_list = []
+        for lesson in lessons:
+            new_elo_for_lesson_based_on_user_activity = self._lesson_repository.get_elo_rating_of_lesson_for_given_user(lesson.id,user_id)
+            elo_difference = lesson.default_elo_rating - new_elo_for_lesson_based_on_user_activity
+
+            if elo_difference <= 0:
+                aux_list.append(elo_difference)
+        try:
+            return sum(aux_list)/len(aux_list)
+        except ZeroDivisionError:
+            return 0
+        #
+        #
+        # return mean(
+        #     [
+        #         self._lesson_repository.get_elo_rating_of_lesson_for_given_user(lesson.id,user_id) - lesson.default_elo_rating
+        #         for lesson in lessons
+        #         if lesson.default_elo_rating - self._lesson_repository.get_elo_rating_of_lesson_for_given_user(lesson.id,user_id) <= 0
+        #
+        #      ]
+        # )
 
 
 
