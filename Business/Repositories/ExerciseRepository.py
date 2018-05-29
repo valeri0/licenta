@@ -1,9 +1,9 @@
-from flask_login import current_user
 
 from Data.Persistance.database import *
 from Data.Domain.Exercise import Exercise
 from Data.Domain.UserExerciseDifficulty import UserExerciseDifficulty
 from Data.Domain.ChapterExercise import ChapterExercise
+from flask_login import current_user
 
 
 class ExerciseRepository:
@@ -21,16 +21,18 @@ class ExerciseRepository:
     def get_all_exercises_for_user(user_id):
         return UserExerciseDifficulty.query.filter_by(user_id=user_id).all()
 
-    def get_all_exercises_from_chapter(self, chapter_id):
+    def get_all_resolved_exercises_from_chapter(self, chapter_id):
 
         exercises_from_chapter = ChapterExercise.query.filter_by(chapter_id=chapter_id).all()
         list_of_exercises = []
         for exc in exercises_from_chapter:
+            if self.exercise_is_resolved_by_user(current_user.id, exc.exercise_id):
+                continue
+
             list_of_exercises.append(self.get_exercise_by_id(exc.exercise_id))
 
         return list_of_exercises
 
-        # return [self.get_exercise_by_id(cx.exercise_id) for cx in exercises_from_chapter]
 
     def all_exercises_are_completed_by_user(self, user_id):
         return all([x.is_completed for x in self.get_all_exercises_for_user(user_id)])
@@ -65,5 +67,3 @@ class ExerciseRepository:
 
 
 ex = ExerciseRepository()
-
-print(ex.get_all_exercises_from_chapter(2))
