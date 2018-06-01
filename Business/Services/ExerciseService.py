@@ -64,7 +64,7 @@ class ExerciseService:
         user_elo = self._user_repository.get_user_by_id(user_id).elo_rating
 
         for exercise in all_exercises:
-            chances_for_user_to_do_the_exercise = elo.quality_1vs1(user_elo, exercise.default_elo_rating)
+            chances_for_user_to_do_the_exercise = elo.expect(user_elo, exercise.default_elo_rating)
             if chances_for_user_to_do_the_exercise > best_chance_to_win[1]:
                 best_chance_to_win = (exercise.id, chances_for_user_to_do_the_exercise)
 

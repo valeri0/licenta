@@ -1,0 +1,8 @@
+WTForms
+translate
+SQLAlchemy
+requests
+Jinja2
+Flask
+Flask-WTF
+elo
