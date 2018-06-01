@@ -41,15 +41,14 @@ from Presentation.AdminView.RoleView import RoleView
 
 import Data.Domain.UserExerciseDifficulty as user_exercise_difficulty
 from Presentation.AdminView.UserExerciseDifficultyView import UserExerciseDifficultyView
-
-
-
+from Presentation.Progress import progress
 
 app = Flask(__name__)
 app.register_blueprint(auth)
 app.register_blueprint(lessons)
 app.register_blueprint(compiler)
 app.register_blueprint(exercises)
+app.register_blueprint(progress)
 
 app.config['SECRET_KEY'] = 'super-secret'
 app.config['SECURITY_REGISTERABLE'] = True
