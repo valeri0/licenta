@@ -61,6 +61,19 @@ class LessonRepository:
             return True
         return False
 
+    def get_next_lesson(self, lesson_id):
+
+        next_lesson = Lesson.query.filter(Lesson.id > lesson_id).first()
+
+        if not next_lesson:
+            return None
+        return next_lesson
+
+    def get_previous_lesson(self,lesson_id):
+        previous_lesson = Lesson.query.filter(Lesson.id < lesson_id).order_by(Lesson.id.desc()).first()
+        if not previous_lesson:
+            return None
+        return previous_lesson
 
 
 

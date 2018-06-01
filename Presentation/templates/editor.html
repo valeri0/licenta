@@ -12,6 +12,7 @@
     </textarea>
 
    <div id="buttons">
+
        {% if lesson is defined %}
   <button id="test-button" class="btn waves-effect waves-light  indigo darken-3" onclick="lesson_test_code({{ lesson.id }})" type="submit" name="action">Test
       {% endif %}
@@ -20,7 +21,7 @@
           <button id="test-button" class="btn waves-effect waves-light  indigo darken-3" onclick="exercise_test_code({{ exercise.id }})" type="submit" name="action">Test
 
       {% endif %}
-    <i class="material-icons right"></i>
+    <i class="material-icons send right"></i>
   </button>
 
    {% if lesson is defined %}

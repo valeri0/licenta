@@ -21,3 +21,8 @@ class LessonService:
     def get_result_from_execution(self, source_code):
         return self._compiler_service.get_result_from_execution(source_code)
 
+    def get_next_lesson(self,current_lesson_id):
+        return self._lesson_repository.get_next_lesson(current_lesson_id)
+
+    def get_previous_lesson(self,current_lesson_id):
+        return self._lesson_repository.get_previous_lesson(current_lesson_id)

@@ -15,12 +15,13 @@ def get_main_page():
 
     return render_template("list_of_lessons.html",chapter_lessons = chapter_lessons)
 
-
 @lessons.route("/lesson/<lesson_id>", methods=['GET'])
 def get_lesson_by_id(lesson_id):
     lesson = _lesson_service.get_lesson_by_id(lesson_id)
+    previous_lesson_id = _lesson_service.get_previous_lesson(lesson_id)
+    next_lesson_id = _lesson_service.get_next_lesson(lesson_id)
 
-    return render_template("lesson.html",lesson=lesson)
+    return render_template("lesson.html",lesson=lesson,previous_lesson_id=previous_lesson_id,next_lesson_id = next_lesson_id)
 
 
 @lessons.route("/lesson/test", methods=['POST'])
