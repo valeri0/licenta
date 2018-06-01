@@ -1,1 +1,2 @@
-def sum_double(a, b):   
+#Go ahead, make the computer talk!
+print('Hi boss!')

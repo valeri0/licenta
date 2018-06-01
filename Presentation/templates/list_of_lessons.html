@@ -32,7 +32,11 @@
       <div class="collapsible-header">{{ chapter[0].title }}</div>
       <div class="collapsible-body collection collapsible-collection">
           {% for lesson in chapter[1:] %}
-                <a href="/lesson/{{ lesson.id }}" class="collection-item">{{ lesson.title }}</a>
+              {% if lesson[1] %}
+              <a href="/lesson/{{ lesson[0].id }}" class="collection-item"><strike>{{ lesson[0].title }}</strike></a>
+              {% else %}
+            <a href="/lesson/{{ lesson[0].id }}" class="collection-item">{{ lesson[0].title }}</a>
+              {% endif %}
           {% endfor %}
       </div>
     </li>

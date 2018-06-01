@@ -1,3 +1,5 @@
+from flask_login import current_user
+
 from Data.Domain.Chapter import Chapter
 from Data.Persistance.database import db_session
 from Business.Repositories.LessonRepository import LessonRepository
@@ -35,7 +37,7 @@ class ChapterRepository:
         '''
 
         result = []
-
+        user_id = current_user.id
         chapters = Chapter.query.all()
         chapter_and_lessons = cl.ChapterLesson.query.all()
 
@@ -45,7 +47,8 @@ class ChapterRepository:
 
             for chls in chapter_and_lessons:
                 if chls.chapter_id == chapter.id:
-                    a_chapter_with_lessons.append(self._lesson_repository.get_lesson_by_id(chls.lesson_id))
+                    lesson_completed_by_user = self._lesson_repository.lesson_is_completed_by_user(user_id,chls.lesson_id)
+                    a_chapter_with_lessons.append((self._lesson_repository.get_lesson_by_id(chls.lesson_id),lesson_completed_by_user))
 
             result.append(a_chapter_with_lessons)
 

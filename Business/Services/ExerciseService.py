@@ -51,12 +51,14 @@ class ExerciseService:
         treshold = 1000
 
         index = 0
-        all_exercises = self._exercise_repository.get_all_resolved_exercises_from_chapter(
+        all_exercises = self._exercise_repository.get_all_unresolved_exercises_from_chapter(
             chapters_with_criteria[index][0])
+
         while len(all_exercises) == 0 and index < len(chapters_with_criteria):
-            index = index + 1
-            all_exercises = self._exercise_repository.get_all_resolved_exercises_from_chapter(
+            all_exercises = self._exercise_repository.get_all_unresolved_exercises_from_chapter(
                 chapters_with_criteria[index][0])
+            index = index + 1
+
 
         best_chance_to_win = (0, float('-inf'))
         user_elo = self._user_repository.get_user_by_id(user_id).elo_rating

@@ -52,6 +52,15 @@ class LessonRepository:
 
         return hard_lessons
 
+    @staticmethod
+    def lesson_is_completed_by_user(user_id, lesson_id):
+        obj =  UserLessonDifficulty.query.filter_by(user_id=user_id,lesson_id=lesson_id).first()
+        if obj is None:
+            return False
+        elif obj.completed:
+            return True
+        return False
+
 
 
 

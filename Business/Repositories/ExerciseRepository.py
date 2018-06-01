@@ -21,15 +21,17 @@ class ExerciseRepository:
     def get_all_exercises_for_user(user_id):
         return UserExerciseDifficulty.query.filter_by(user_id=user_id).all()
 
-    def get_all_resolved_exercises_from_chapter(self, chapter_id):
+    def get_all_unresolved_exercises_from_chapter(self, chapter_id):
 
         exercises_from_chapter = ChapterExercise.query.filter_by(chapter_id=chapter_id).all()
         list_of_exercises = []
         for exc in exercises_from_chapter:
-            if self.exercise_is_resolved_by_user(current_user.id, exc.exercise_id):
-                continue
+            try:
+                if not self.exercise_is_resolved_by_user(current_user.id, exc.exercise_id):
+                    list_of_exercises.append(self.get_exercise_by_id(exc.exercise_id))
+            except AttributeError:
+                list_of_exercises.append(self.get_exercise_by_id(exc.exercise_id))
 
-            list_of_exercises.append(self.get_exercise_by_id(exc.exercise_id))
 
         return list_of_exercises
 
