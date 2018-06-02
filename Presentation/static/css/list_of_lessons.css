@@ -61,5 +61,16 @@
 }
 
 .collapsible li.disabled .collapsible-header {
-    background: rgb(221,221,221);
+  background: rgb(221, 221, 221);
+  color: #989c9b;
+}
+
+.collapsible li .collapsible-body a.collection-item.disabled{
+      pointer-events: none;
+      background-color: #a4a4a4;
+      color: grey;
+}
+
+.completed-item{
+  text-decoration: line-through;
 }

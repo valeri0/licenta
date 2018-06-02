@@ -14,7 +14,7 @@
    <div id="buttons">
 
        {% if lesson is defined %}
-  <button id="test-button" class="btn waves-effect waves-light  indigo darken-3" onclick="lesson_test_code({{ lesson.id }})" type="submit" name="action">Test
+  <button id="test-button" class="btn waves-effect waves-light  indigo darken-3 btn-large" onclick="lesson_test_code({{ lesson.id }})" type="submit" name="action">Test
       {% endif %}
 
       {% if exercise is defined %}
@@ -25,7 +25,7 @@
   </button>
 
    {% if lesson is defined %}
-         <button id="submit-button" class="btn waves-effect waves-light red lighten-1" onclick="lesson_submit_code({{ lesson.id }})" type="submit" name="action">Submit
+         <button id="submit-button" class="btn waves-effect waves-light red lighten-1 btn-large" onclick="lesson_submit_code({{ lesson.id }})" type="submit" name="action">Submit
    {% endif %}
 
    {% if exercise is defined %}

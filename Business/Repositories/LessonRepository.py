@@ -1,3 +1,5 @@
+from flask_login import current_user
+
 from Data.Persistance.database import *
 from Data.Domain.Lesson import Lesson
 from Data.Domain.UserLessonDifficulty import UserLessonDifficulty
@@ -75,6 +77,16 @@ class LessonRepository:
             return None
         return previous_lesson
 
+    def get_current_lesson_id_for_user(self,user_id):
+        '''
 
+        :return: The lesson which the user is at the moment
+        '''
+
+        current_lesson = UserLessonDifficulty.query.filter(UserLessonDifficulty.completed == 0,UserLessonDifficulty.user_id == user_id).order_by(UserLessonDifficulty.lesson_id.asc()).first()
+
+        if current_lesson:
+            return current_lesson.lesson_id
+        return None
 
 les = LessonRepository()

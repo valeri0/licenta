@@ -31,10 +31,6 @@ class ChapterRepository:
         return lessons
 
     def get_lessons_grouped_by_chapter_for_view(self):
-        '''
-
-        :return: list of list of the form: [ [Chapter1, Lesson1,Lesson2],[Chapter2,Lesson1,Lesson2]]
-        '''
 
         result = []
         user_id = current_user.id
@@ -52,7 +48,9 @@ class ChapterRepository:
 
             result.append(a_chapter_with_lessons)
 
-        return result
+        current_lesson_id = self._lesson_repository.get_current_lesson_id_for_user(user_id)
+
+        return result,current_lesson_id
 
     def get_max_of_elo_for_user(self, chapter_id, user_id):
 
