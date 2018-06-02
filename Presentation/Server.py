@@ -3,17 +3,18 @@ from flask_security import Security
 from flask_login import LoginManager
 
 from Business.Repositories.UserRepository import UserRepository
+from Business.Services.LessonService import LessonService
 from Business.Services.UserService import UserService
 from Data.Utils.LoginForm import LoginForm
 from Data.Utils.RegistrationForm import RegistrationForm
 from Presentation.Authentication import auth
+from Presentation.Homeworks import homeworks
 from Presentation.Lessons import lessons
 from Presentation.Compiler import compiler
 from Presentation.Exercises import exercises
 from flask_login import current_user
 
 from flask_admin import Admin
-
 
 import Data.Domain.Exercise as exercise
 from Presentation.AdminView.ExerciseView import ExerciseView
@@ -49,6 +50,7 @@ app.register_blueprint(lessons)
 app.register_blueprint(compiler)
 app.register_blueprint(exercises)
 app.register_blueprint(progress)
+app.register_blueprint(homeworks)
 
 app.config['SECRET_KEY'] = 'super-secret'
 app.config['SECURITY_REGISTERABLE'] = True
@@ -70,18 +72,26 @@ security = Security(app, user_repository.get_user_datastore())
 admin = Admin(app, name="my app", template_mode="bootstrap3")
 admin.add_view(UserView(user.User, user.db.db_session))
 
-admin.add_view(RoleView(role.Role,role.db.db_session))
-admin.add_view(UserLessonDifficultyView(user_lesson_difficulty.UserLessonDifficulty,user_lesson_difficulty.db.db_session))
-admin.add_view(LessonView(lesson.Lesson,lesson.db.db_session))
-admin.add_view(ChapterExerciseView(chapter_exercise.ChapterExercise,chapter_exercise.db.db_session))
-admin.add_view(ChapterLessonView(chapter_lesson.ChapterLesson,chapter_lesson.db.db_session))
-admin.add_view(ChapterView(chapter.Chapter,chapter.db.db_session))
-admin.add_view(ExerciseView(exercise.Exercise,exercise.db.db_session))
-admin.add_view(UserExerciseDifficultyView(user_exercise_difficulty.UserExerciseDifficulty,user_exercise_difficulty.db.db_session))
+admin.add_view(RoleView(role.Role, role.db.db_session))
+admin.add_view(
+    UserLessonDifficultyView(user_lesson_difficulty.UserLessonDifficulty, user_lesson_difficulty.db.db_session))
+admin.add_view(LessonView(lesson.Lesson, lesson.db.db_session))
+admin.add_view(ChapterExerciseView(chapter_exercise.ChapterExercise, chapter_exercise.db.db_session))
+admin.add_view(ChapterLessonView(chapter_lesson.ChapterLesson, chapter_lesson.db.db_session))
+admin.add_view(ChapterView(chapter.Chapter, chapter.db.db_session))
+admin.add_view(ExerciseView(exercise.Exercise, exercise.db.db_session))
+admin.add_view(
+    UserExerciseDifficultyView(user_exercise_difficulty.UserExerciseDifficulty, user_exercise_difficulty.db.db_session))
+
+_lesson_service = LessonService()
+
+
 @app.route("/")
 def index():
     if current_user.is_authenticated:
-        return render_template("dashboard.html", name=current_user.get_display_name())
+        current_lesson_id = _lesson_service.get_current_lesson()
+
+        return render_template("dashboard.html", user=current_user, current_lesson_id=current_lesson_id)
 
     register_form = RegistrationForm()
     login_form = LoginForm()

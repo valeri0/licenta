@@ -28,5 +28,9 @@ class LessonService:
 
     def get_previous_lesson(self,current_lesson_id):
         return self._lesson_repository.get_previous_lesson(current_lesson_id)
+
+    def get_current_lesson(self):
+        return self._lesson_repository.get_current_lesson_id_for_user(current_user.id)
+
     def is_lesson_completed_by_user(self,lesson_id):
         return self._lesson_repository.lesson_is_completed_by_user(current_user.id,lesson_id)
