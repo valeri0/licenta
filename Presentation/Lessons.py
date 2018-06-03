@@ -31,9 +31,12 @@ def get_lesson_by_id(lesson_id):
     if next_lesson:
         is_next_completed = _lesson_service.is_lesson_completed_by_user(next_lesson.id)
 
+
+    temporary_code = _lesson_service.get_temporary_code(lesson_id)
+
     return render_template("lesson.html", lesson=lesson, is_current_completed=is_current_completed,
                            previous_lesson=(previous_lesson, is_previous_completed),
-                           next_lesson=(next_lesson, is_next_completed))
+                           next_lesson=(next_lesson, is_next_completed),temporary_code=temporary_code)
 
 
 @lessons.route("/lesson/completed/<lesson_id>", methods=['GET'])
@@ -55,7 +58,8 @@ def is_lesson_completed(lesson_id):
 @lessons.route("/lesson/test", methods=['POST'])
 def test_code():
     source_code = request.json['code']
-    execution_response = _lesson_service.get_result_from_execution(source_code)
+    lesson_id = request.json['id']
+    execution_response = _lesson_service.get_result_from_execution(source_code,lesson_id)
 
     response = {
         'message': str(execution_response[0]),

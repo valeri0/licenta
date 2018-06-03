@@ -1,11 +1,15 @@
 
 <div>
     {% if lesson is defined %}
-    <div id="editor">{{ lesson.source_code }}</div>
+    <div id="editor">{{ temporary_code }}</div>
     {% endif %}
     {% if exercise is defined %}
-    <div id="editor"> {{ exercise.source_code }}</div>
+    <div id="editor"> {{ temporary_code }}</div>
     {% endif %}
+    {% if homework is defined  %}
+    <div id="editor"> {{ temporary_code }}</div>
+    {% endif %}
+
 
     <textarea title="console" id = "console" readonly>
 
@@ -18,10 +22,14 @@
       {% endif %}
 
       {% if exercise is defined %}
-          <button id="test-button" class="btn waves-effect waves-light  indigo darken-3" onclick="exercise_test_code({{ exercise.id }})" type="submit" name="action">Test
+          <button id="test-button" class="btn waves-effect waves-light  indigo darken-3 btn-large" onclick="exercise_test_code({{ exercise.id }})" type="submit" name="action">Test
 
       {% endif %}
-    <i class="material-icons send right"></i>
+
+      {% if homework is defined %}
+            <button id="test-button" class="btn waves-effect waves-light  indigo darken-3 btn-large" onclick="homework_test_code({{ homework.id }})" type="submit" name="action">Test
+      {% endif %}
+    <i class="material-icons"></i>
   </button>
 
    {% if lesson is defined %}
@@ -29,8 +37,13 @@
    {% endif %}
 
    {% if exercise is defined %}
-         <button id="submit-button" class="btn waves-effect waves-light red lighten-1" onclick="exercise_submit_code({{ exercise.id }})" type="submit" name="action">Submit
+         <button id="submit-button" class="btn waves-effect waves-light red lighten-1 btn-large" onclick="exercise_submit_code({{ exercise.id }})" type="submit" name="action">Submit
    {% endif %}
+
+    {% if homework is defined %}
+               <button id="submit-button" class="btn waves-effect waves-light red lighten-1 btn-large" onclick="homework_submit_code({{ homework.id }})" type="submit" name="action">Submit
+
+    {% endif %}
     <i class="material-icons right"></i>
   </button>
 

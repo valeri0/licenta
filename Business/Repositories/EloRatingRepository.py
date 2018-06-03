@@ -101,24 +101,3 @@ class EloRatingRepository:
             exercise_for_user.completed = True
 
             self.db_context.commit()
-
-
-
-
-        #
-        #
-        # if not lesson.is_completed():
-        #
-        #     lesson_old_elo = lesson.user_lesson_difficulty.elo_rating
-        #     user_old_elo = user.elo_rating
-        #
-        #     elo_lesson, elo_user = self._get_elo_ratings(lesson_old_elo, user_old_elo)
-        #
-        #     if test_case_factor:
-        #         elo_lesson, elo_user = self._adjust_elo_rating_for_functions(lesson_old_elo, user_old_elo,
-        #                                                                      test_case_factor)
-        #
-        #     user.elo_rating = elo_user
-        #     lesson.user_lesson_difficulty.elo_rating = elo_lesson
-        #
-        #     self.db_context.commit()

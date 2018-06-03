@@ -1,4 +1,3 @@
-
 from Data.Persistance.database import *
 from Data.Domain.Exercise import Exercise
 from Data.Domain.UserExerciseDifficulty import UserExerciseDifficulty
@@ -32,9 +31,7 @@ class ExerciseRepository:
             except AttributeError:
                 list_of_exercises.append(self.get_exercise_by_id(exc.exercise_id))
 
-
         return list_of_exercises
-
 
     def all_exercises_are_completed_by_user(self, user_id):
 
@@ -70,9 +67,20 @@ class ExerciseRepository:
         usr.exercise_id = exercise_id
         usr.elo_rating = exercise.default_elo_rating
         usr.completed = False
+        usr.temporary_code = exercise.source_code
 
         self._db_context.add(usr)
         self._db_context.commit()
 
+    def update_temporary_code(self, user_id, exercise_id, source_code):
+        usr_ex_diff = self.get_user_exercise_difficulty_for_user(exercise_id, user_id)
+
+        usr_ex_diff.temporary_code = source_code
+
+        self._db_context.commit()
+
+    def get_temporary_code(self, user_id, exercise_id):
+        usr_ex_diff = self.get_user_exercise_difficulty_for_user(exercise_id, user_id)
+        return usr_ex_diff.temporary_code
 
 ex = ExerciseRepository()

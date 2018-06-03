@@ -131,6 +131,33 @@ function exercise_submit_code(exercise_id){
         editor.getValue(),exercise_id);
 }
 
+function homework_test_code(homework_id) {
+    editor.getSession().setAnnotations([{}]);
+    output_console.classList.add('loading');
+    output_console.value='Loading';
+
+     httpGetAsync(APP_URL+"homeworks/test",function (response){
+
+        render_output_to_console(response,'homework');
+    },
+        editor.getValue(),homework_id);
+
+}
+
+function homework_submit_code(homework_id) {
+
+        editor.getSession().setAnnotations([{}]);
+    output_console.classList.add('loading');
+    output_console.value='Loading';
+
+
+    httpGetAsync(APP_URL+"homeworks/submit",function (response){
+
+        render_output_to_console(response,'homework');
+    },
+        editor.getValue(),homework_id);
+
+}
 
 
 

@@ -1,12 +1,12 @@
-def func_submitted(name):
-    return "Hello " + name
-  
-
+def func_submitted(str):
+    return str
 
 test_case = [("not",),("notanot",),("parrot",),("hello",),("notfunnyman",)]
 
-def func_resolved(name):
-	return "Hello " + name;
+def func_resolved(str):
+  if len(str) >= 3 and str[:3] == "not":
+    return str
+  return "not " + str
 
 count = 0
 index = 1

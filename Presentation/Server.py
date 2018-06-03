@@ -42,6 +42,16 @@ from Presentation.AdminView.RoleView import RoleView
 
 import Data.Domain.UserExerciseDifficulty as user_exercise_difficulty
 from Presentation.AdminView.UserExerciseDifficultyView import UserExerciseDifficultyView
+
+import Data.Domain.Homework as homework
+from Presentation.AdminView.HomeworkView import HomeworkView
+
+import Data.Domain.UserHomeworkDifficulty as user_homework_difficulty
+from Presentation.AdminView.UserHomeworkDifficultyView import UserHomeworkDifficultyView
+
+import Data.Domain.Notification as notification
+from Presentation.AdminView.NotificationView import NotificationView
+
 from Presentation.Progress import progress
 
 app = Flask(__name__)
@@ -59,19 +69,13 @@ app.config['SECURITY_PASSWORD_HASH'] = "sha512_crypt"
 app.config['SECURITY_REGISTER_URL'] = '/create_account'
 app.config['SECURITY_LOGIN_TEMPLATE'] = 'security/register.html'
 app.config['TEMPLATES_AUTO_RELOAD'] = True
-
 app.debug = True
 
 login_manager = LoginManager()
 login_manager.init_app(app)
 
-user_repository = UserRepository()
-user_service = UserService()
-security = Security(app, user_repository.get_user_datastore())
-
 admin = Admin(app, name="my app", template_mode="bootstrap3")
 admin.add_view(UserView(user.User, user.db.db_session))
-
 admin.add_view(RoleView(role.Role, role.db.db_session))
 admin.add_view(
     UserLessonDifficultyView(user_lesson_difficulty.UserLessonDifficulty, user_lesson_difficulty.db.db_session))
@@ -82,8 +86,15 @@ admin.add_view(ChapterView(chapter.Chapter, chapter.db.db_session))
 admin.add_view(ExerciseView(exercise.Exercise, exercise.db.db_session))
 admin.add_view(
     UserExerciseDifficultyView(user_exercise_difficulty.UserExerciseDifficulty, user_exercise_difficulty.db.db_session))
+admin.add_view(HomeworkView(homework.Homework, homework.db.db_session))
+admin.add_view(
+    UserHomeworkDifficultyView(user_homework_difficulty.UserHomeworkDifficulty, user_homework_difficulty.db.db_session))
+admin.add_view(NotificationView(notification.Notification,notification.db.db_session))
 
 _lesson_service = LessonService()
+user_repository = UserRepository()
+user_service = UserService()
+security = Security(app, user_repository.get_user_datastore())
 
 
 @app.route("/")

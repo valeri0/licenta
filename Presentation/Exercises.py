@@ -12,9 +12,9 @@ def suggest_exercise():
     exercise = _exercise_service.suggest_exercise_for_user(current_user.id)
     difficulty = elo.expect(current_user.elo_rating, exercise.default_elo_rating)
 
+    temporary_code = _exercise_service.get_temporary_code(exercise.id)
 
-
-    return render_template("exercise.html", exercise=exercise, difficulty=int(difficulty*100))
+    return render_template("exercise.html", exercise=exercise, difficulty=int(difficulty*100),temporary_code=temporary_code)
 
 
 @exercises.route("/exercise/test", methods=['POST'])

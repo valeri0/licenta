@@ -5,6 +5,7 @@ from sqlalchemy import Boolean, DateTime, Column, Integer, \
     String, ForeignKey, Float
 
 from Data.Domain.Role import Role
+from Data.Domain.Notification import Notification
 
 from flask.ext import bcrypt
 
@@ -19,6 +20,7 @@ class User(db.Base, UserMixin):
     active = Column(Boolean())
     role_id = Column(Integer(), ForeignKey('role.id'))
     role = relationship(Role)
+    notification = relationship(Notification,uselist=False)
     is_authenticated = True
 
     def is_authenticated(self):

@@ -16,7 +16,6 @@ class ExerciseService:
     _elo_rating_repository = EloRatingRepository()
 
     def suggest_exercise_for_user(self, user_id):
-        # TODO: Temporary problem with the suggestion, will be fixed when the app will include tasks to complete in order to unlock features such as being able to do exercises after a certain number of lessons are done, as a workaround the user will have all the exercises by one insert, and not inserting step by step
 
         # if all the lessons are completed, then a random exercise from all the ones will be generated
         if self._exercise_repository.all_exercises_are_completed_by_user(user_id):
@@ -84,13 +83,22 @@ class ExerciseService:
         return int(factor[0]) / int(factor[2])
 
     def test_the_exercise(self, source_code, exercise_id):
+        user_id = current_user.id
+
         exercise = self._exercise_repository.get_exercise_by_id(exercise_id)
+
+
+        self._exercise_repository.update_temporary_code(user_id,exercise_id,source_code)
+
         result_from_execution = self._compiler_service.evaluate_function_submitted_by_user(source_code,
                                                                                            exercise.solved_source_code)
 
         return result_from_execution
 
     def evaluate_exercise(self, source_code, exercise_id):
+        user_id = current_user.id
+        self._exercise_repository.update_temporary_code(user_id,exercise_id,source_code)
+
         exercise = self._exercise_repository.get_exercise_by_id(exercise_id)
         result_from_execution = self._compiler_service.evaluate_function_submitted_by_user(source_code,
                                                                                            exercise.solved_source_code)
@@ -112,3 +120,6 @@ class ExerciseService:
             self._elo_rating_repository.exercise_wins_over_user(exercise_id, None)
 
         return result_from_execution
+
+    def get_temporary_code(self,exercise_id):
+        return self._exercise_repository.get_temporary_code(current_user.id,exercise_id)
