@@ -2,6 +2,7 @@ import time
 
 import atexit
 from apscheduler.schedulers.background import BackgroundScheduler
+from apscheduler.schedulers.blocking import BlockingScheduler
 from apscheduler.triggers.interval import IntervalTrigger
 from flask import Blueprint, render_template, request, app, Response
 import json
@@ -86,7 +87,7 @@ def update_remaining_time_for_lessons():
     current_date = time.strftime("%A, %d. %B %Y %I:%M:%S %p")
     print('[{}] Done!'.format(current_date))
 
-# sched = BackgroundScheduler(daemon=True)
+# sched = BackgroundScheduler()
 # sched.start()
 # sched.add_job(update_remaining_time_for_lessons,
 #               trigger=IntervalTrigger(seconds=10),
@@ -94,7 +95,3 @@ def update_remaining_time_for_lessons():
 #               replace_existing=True
 #               )
 # atexit.register(lambda : sched.shutdown())
-
-#
-# def event_stream():
-#     while True:

@@ -1,13 +1,90 @@
-new Chartist.Line('.ct-chart', {
-  labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-  series: [
-      [12, 9, 7, 8, 5],
-       [2, 1, 3.5, 7, 3],
-      [1, 3, 4, 5, 6]
-      ]
-}, {
- fullWidth: true,
- chartPadding: {
-    right: 40
- }
+
+// ELO GAUGE CHART
+var chart = new Chartist.Pie('#elo_chart',
+    {
+        series: [160, 60 ],
+        labels: ['', '']
+    }, {
+        donut: true,
+        donutWidth: 20,
+        startAngle: 210,
+        total: 260,
+        showLabel: false,
+        plugins: [
+            Chartist.plugins.fillDonut({
+                items: [{
+                    content: '<i class="fa fa-tachometer"></i>',
+                    position: 'bottom',
+                    offsetY : 10,
+                    offsetX: -2
+                }, {
+                    content: '<h3>160<span class="small"></span></h3>'
+                }]
+            })
+        ],
+    });
+
+chart.on('draw', function(data) {
+    if(data.type === 'slice' && data.index == 0) {
+        // Get the total path length in order to use for dash array animation
+        var pathLength = data.element._node.getTotalLength();
+
+        // Set a dasharray that matches the path length as prerequisite to animate dashoffset
+        data.element.attr({
+            'stroke-dasharray': pathLength + 'px ' + pathLength + 'px'
+        });
+
+        // Create animation definition while also assigning an ID to the animation for later sync usage
+        var animationDefinition = {
+            'stroke-dashoffset': {
+                id: 'anim' + data.index,
+                dur: 1200,
+                from: -pathLength + 'px',
+                to:  '0px',
+                easing: Chartist.Svg.Easing.easeOutQuint,
+                fill: 'freeze'
+            }
+        };
+
+        // We need to set an initial value before the animation starts as we are not in guided mode which would do that for us
+        data.element.attr({
+            'stroke-dashoffset': -pathLength + 'px'
+        });
+
+        // We can't use guided mode as the animations need to rely on setting begin manually
+        // See http://gionkunz.github.io/chartist-js/api-documentation.html#chartistsvg-function-animate
+        data.element.animate(animationDefinition, true);
+    }
 });
+
+
+
+// ELO TRESHOLD CHART
+
+new Chartist.Line('#elo_evolution', {
+  labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+  series: [
+    [5, -4, 3, 7, 20, 10, 3, 4, 8, -10, 6, -8]
+  ]
+}, {
+  showArea: true,
+  axisY: {
+    onlyInteger: true
+  },
+  plugins: [
+    Chartist.plugins.ctThreshold({
+      threshold: 4
+    })
+  ],
+    height: 300
+});
+
+
+// Resolved by far bar chart
+new Chartist.Bar('#resolved_by_far', {
+  labels: ['Lessons', 'Exercises', 'Homeworks'],
+  series: [14, 2, 1]
+}, {
+  distributeSeries: true
+});
+

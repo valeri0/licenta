@@ -56,6 +56,8 @@ from Presentation.AdminView.UserHomeworkDifficultyView import UserHomeworkDiffic
 import Data.Domain.Notification as notification
 from Presentation.AdminView.NotificationView import NotificationView
 
+import Data.Domain.UserEloUpdate as user_elo_update
+from Presentation.AdminView.UserEloUpdateView import UserEloUpdateView
 from Presentation.Progress import progress
 
 app = Flask(__name__)
@@ -93,6 +95,7 @@ admin.add_view(HomeworkView(homework.Homework, homework.db.db_session))
 admin.add_view(
     UserHomeworkDifficultyView(user_homework_difficulty.UserHomeworkDifficulty, user_homework_difficulty.db.db_session))
 admin.add_view(NotificationView(notification.Notification,notification.db.db_session))
+admin.add_view(UserEloUpdateView(user_elo_update.UserEloUpdate,user_elo_update.db.db_session))
 
 _lesson_service = LessonService()
 user_repository = UserRepository()

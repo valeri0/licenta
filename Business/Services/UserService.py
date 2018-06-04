@@ -1,3 +1,5 @@
+from flask_login import current_user
+
 from Business.Repositories.LessonRepository import LessonRepository
 from Business.Repositories.UserRepository import UserRepository
 from Data.Domain.User import User
@@ -33,3 +35,7 @@ class UserService:
 
     def get_user_by_email(self,_email):
         return self.__user_repository.get_user_by_email(_email)
+
+    def get_elo_updates_for_user(self):
+        user_id = current_user.id
+        return self.__user_repository.get_elo_progress_for_user(user_id)
