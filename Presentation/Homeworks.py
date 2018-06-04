@@ -1,13 +1,18 @@
 import time
+
+import atexit
 from apscheduler.schedulers.background import BackgroundScheduler
-from flask import Blueprint, render_template, request, app
+from apscheduler.triggers.interval import IntervalTrigger
+from flask import Blueprint, render_template, request, app, Response
 import json
 
 from Business.Services.HomeworkService import HomeworkService
+from Business.Services.NotificationService import NotificationService
 
 homeworks = Blueprint('homeworks', __name__, template_folder='templates')
 
 _homework_service = HomeworkService()
+_notification_service = NotificationService()
 
 
 @homeworks.route("/homeworks", methods=['GET'])
@@ -55,8 +60,23 @@ def submit_homework():
     return json.dumps(response), 200
 
 
-# @homeworks.route("/notify")
-# def notify():
+@homeworks.route("/notification_stream/<user_id>", methods=['GET'])
+def notify(user_id):
+    new_notifications = _notification_service.get_new_notification_for_user(user_id)
+    if len(new_notifications) > 0:
+        json_data = {}
+        for notif in new_notifications:
+            json_data[notif.id] = notif.content
+        return json.dumps(json_data), 200
+
+    return 'a', 404
+
+
+@homeworks.route("/notification_stream/dismiss", methods=['POST'])
+def dismiss_notifications():
+    ids = request.json['ids']
+    _notification_service.mark_notifications_as_seen(ids)
+    return 'a',200
 
 def update_remaining_time_for_lessons():
     current_date = time.strftime("%A, %d. %B %Y %I:%M:%S %p")
@@ -66,9 +86,14 @@ def update_remaining_time_for_lessons():
     current_date = time.strftime("%A, %d. %B %Y %I:%M:%S %p")
     print('[{}] Done!'.format(current_date))
 
-sched = BackgroundScheduler(daemon=True)
-sched.add_job(update_remaining_time_for_lessons, 'interval', seconds = 10)
-sched.start()
+# sched = BackgroundScheduler(daemon=True)
+# sched.start()
+# sched.add_job(update_remaining_time_for_lessons,
+#               trigger=IntervalTrigger(seconds=10),
+#               id = 'updating_homeworks_job',
+#               replace_existing=True
+#               )
+# atexit.register(lambda : sched.shutdown())
 
 #
 # def event_stream():
