@@ -1,6 +1,7 @@
+var user_id = document.getElementById('current_user').content;
 
 
-function draw_gauge_chart(){
+function draw_gauge_chart(value){
 
     // ELO GAUGE CHART
 var chart = new Chartist.Pie('#elo_chart',
@@ -21,7 +22,7 @@ var chart = new Chartist.Pie('#elo_chart',
                     offsetY : 10,
                     offsetX: -2
                 }, {
-                    content: '<h3>160.25<span class="small"></span></h3>'
+                    content: '<h3>'+value+'<span class="small"></span></h3>'
                 }]
             })
         ],
@@ -66,12 +67,20 @@ chart.on('draw', function(data) {
 
 // ELO TRESHOLD CHART
 
-function draw_treshold_chart(){
+function draw_treshold_chart(obj){
+
+        labels_list = [];
+        values_list = [];
+
+        for(i = 0; i<obj.length; i++){
+            labels_list.push(obj[i]['created_at']);
+            values_list .push(obj[i]['value']);
+        }
 
         new Chartist.Line('#elo_evolution', {
-          labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+          labels: labels_list,
           series: [
-            [5, -4, 3, 7, 20, 10, 3, 4, 8, -10, 6, -8]
+            values_list
           ]
         }, {
           showArea: true,
@@ -80,7 +89,7 @@ function draw_treshold_chart(){
           },
           plugins: [
             Chartist.plugins.ctThreshold({
-              threshold: 4
+              threshold: 0
             })
           ],
             height: 300
@@ -117,10 +126,9 @@ function get_data_for_bar_chart(callback){
             var exercises = json['exercises'];
             var homeworks = json['homeworks'];
 
-            console.log(lessons,exercises,homeworks);
             callback(lessons,exercises,homeworks);
     };
-    xmlHttp.open("GET","http://127.0.0.1:5000/progress/resolved/18" , true); // true for asynchronous
+    xmlHttp.open("GET","http://127.0.0.1:5000/progress/resolved/"+user_id , true); // true for asynchronous
     xmlHttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xmlHttp.send(null);
 
@@ -134,12 +142,27 @@ function get_data_for_treshold_chart(callback){
 
 
             var json = JSON.parse(xmlHttp.responseText);
-            console.log(lessons,exercises,homeworks);
-            callback(lessons,exercises,homeworks);
+            callback(json);
     };
-    xmlHttp.open("GET","http://127.0.0.1:5000/progress/resolved/18" , true); // true for asynchronous
+    xmlHttp.open("GET","http://127.0.0.1:5000/progress/elo/evolution/"+user_id , true); // true for asynchronous
+    xmlHttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xmlHttp.send(null);
+}
+
+function get_data_for_gauge_chart(callback){
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function() {
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+
+
+            var json = JSON.parse(xmlHttp.responseText);
+            callback(json['value']);
+    };
+    xmlHttp.open("GET","http://127.0.0.1:5000/progress/elo/user/"+user_id , true); // true for asynchronous
     xmlHttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xmlHttp.send(null);
 }
 
 get_data_for_bar_chart(draw_bar_chart);
+get_data_for_treshold_chart(draw_treshold_chart);
+get_data_for_gauge_chart(draw_gauge_chart);
