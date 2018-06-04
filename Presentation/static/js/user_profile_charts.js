@@ -1,5 +1,8 @@
 
-// ELO GAUGE CHART
+
+function draw_gauge_chart(){
+
+    // ELO GAUGE CHART
 var chart = new Chartist.Pie('#elo_chart',
     {
         series: [160, 60 ],
@@ -18,7 +21,7 @@ var chart = new Chartist.Pie('#elo_chart',
                     offsetY : 10,
                     offsetX: -2
                 }, {
-                    content: '<h3>160<span class="small"></span></h3>'
+                    content: '<h3>160.25<span class="small"></span></h3>'
                 }]
             })
         ],
@@ -59,32 +62,84 @@ chart.on('draw', function(data) {
 
 
 
+}
+
 // ELO TRESHOLD CHART
 
-new Chartist.Line('#elo_evolution', {
-  labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-  series: [
-    [5, -4, 3, 7, 20, 10, 3, 4, 8, -10, 6, -8]
-  ]
-}, {
-  showArea: true,
-  axisY: {
-    onlyInteger: true
-  },
-  plugins: [
-    Chartist.plugins.ctThreshold({
-      threshold: 4
-    })
-  ],
-    height: 300
-});
+function draw_treshold_chart(){
+
+        new Chartist.Line('#elo_evolution', {
+          labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+          series: [
+            [5, -4, 3, 7, 20, 10, 3, 4, 8, -10, 6, -8]
+          ]
+        }, {
+          showArea: true,
+          axisY: {
+            onlyInteger: true
+          },
+          plugins: [
+            Chartist.plugins.ctThreshold({
+              threshold: 4
+            })
+          ],
+            height: 300
+        });
+
+}
 
 
-// Resolved by far bar chart
-new Chartist.Bar('#resolved_by_far', {
-  labels: ['Lessons', 'Exercises', 'Homeworks'],
-  series: [14, 2, 1]
-}, {
-  distributeSeries: true
-});
 
+function draw_bar_chart(lessons,exercises,homeworks){
+
+    // Resolved by far bar chart
+    new Chartist.Bar('#resolved_by_far', {
+      labels: ['Lessons', 'Exercises', 'Homeworks'],
+      series: [lessons,exercises,homeworks]
+    }, {
+      distributeSeries: true
+    });
+
+}
+
+
+
+function get_data_for_bar_chart(callback){
+
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function() {
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+
+
+            var json = JSON.parse(xmlHttp.responseText);
+
+            var lessons = json['lessons'];
+            var exercises = json['exercises'];
+            var homeworks = json['homeworks'];
+
+            console.log(lessons,exercises,homeworks);
+            callback(lessons,exercises,homeworks);
+    };
+    xmlHttp.open("GET","http://127.0.0.1:5000/progress/resolved/18" , true); // true for asynchronous
+    xmlHttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xmlHttp.send(null);
+
+}
+
+function get_data_for_treshold_chart(callback){
+
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function() {
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+
+
+            var json = JSON.parse(xmlHttp.responseText);
+            console.log(lessons,exercises,homeworks);
+            callback(lessons,exercises,homeworks);
+    };
+    xmlHttp.open("GET","http://127.0.0.1:5000/progress/resolved/18" , true); // true for asynchronous
+    xmlHttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xmlHttp.send(null);
+}
+
+get_data_for_bar_chart(draw_bar_chart);

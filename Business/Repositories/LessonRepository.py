@@ -104,4 +104,8 @@ class LessonRepository:
         user_lesson_difficulty = UserLessonDifficulty.query.filter_by(user_id=user_id, lesson_id=lesson_id).first()
         return user_lesson_difficulty.temporary_code
 
+    def get_all_completed_lessons_by_user(self,user_id):
+        return UserLessonDifficulty.query.filter_by(user_id=user_id,completed=1).all()
+
+
 les = LessonRepository()

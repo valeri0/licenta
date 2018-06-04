@@ -83,4 +83,7 @@ class ExerciseRepository:
         usr_ex_diff = self.get_user_exercise_difficulty_for_user(exercise_id, user_id)
         return usr_ex_diff.temporary_code
 
+    def get_all_exercises_completed_by_user(self,user_id):
+        return UserExerciseDifficulty.query.filter_by(user_id=user_id,completed =1).all()
+
 ex = ExerciseRepository()

@@ -36,6 +36,24 @@ class UserService:
     def get_user_by_email(self,_email):
         return self.__user_repository.get_user_by_email(_email)
 
-    def get_elo_updates_for_user(self):
-        user_id = current_user.id
-        return self.__user_repository.get_elo_progress_for_user(user_id)
+    def get_elo_updates_for_user(self,user_id):
+        response = self.__user_repository.get_elo_progress_for_user(user_id)
+        result_list = []
+        for x in response:
+            result_list.append({
+                'created_at' : x.created_at,
+                'value' : x.elo_difference,
+                'notes' : x.notes
+            })
+
+        return result_list
+
+    def get_resolved_by_now(self,user_id):
+        '''
+        :return: (lessons,exercises,homeworks) => how many the user completed
+        '''
+
+        return self.__user_repository.get_resolved_by_now(user_id)
+
+
+u = UserService()
