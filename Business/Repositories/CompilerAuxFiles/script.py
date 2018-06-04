@@ -1,13 +1,14 @@
-def func_submitted(str):
-    return str
+  #nimic
 
-test_case = [("not",),("notanot",),("parrot",),("hello",),("notfunnyman",)]
+def func_submitted(a,b,c):
+    return a in range(b,c)
 
-def func_resolved(str):
-  if len(str) >= 3 and str[:3] == "not":
-    return str
-  return "not " + str
+test_case = [(1,0,10),(2,5,7),(3,1,2),(4,5,5),(4,0,10),(5,0,100)]
 
+def func_resolved(a,b,c):
+	return a in range(b,c)
+  
+  
 count = 0
 index = 1
 number_of_params = len(test_case[0])

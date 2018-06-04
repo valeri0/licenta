@@ -1,4 +1,6 @@
-from flask import Blueprint, render_template, request
+import time
+from apscheduler.schedulers.background import BackgroundScheduler
+from flask import Blueprint, render_template, request, app
 import json
 
 from Business.Services.HomeworkService import HomeworkService
@@ -18,7 +20,9 @@ def get_list_of_homeworks():
 def get_homeworks(homework_id):
     homework = _homework_service.get_homework_by_id(homework_id)
     temporary_code = _homework_service.get_temporary_code_for_homework(homework_id)
-    return render_template("homework.html", homework=homework, temporary_code=temporary_code)
+    homework_details = _homework_service.get_user_homework_difficulty_for_user(homework_id)
+    return render_template("homework.html", homework=homework, temporary_code=temporary_code,
+                           homework_details=homework_details)
 
 
 @homeworks.route("/homeworks/test", methods=['POST'])
@@ -26,7 +30,7 @@ def test_homework():
     source_code = request.json['code']
     homework_id = request.json['id']
 
-    execution_response = ('plm, e ok', 200)
+    execution_response = _homework_service.test_homework(source_code, homework_id)
 
     response = {
         'message': str(execution_response[0]),
@@ -41,7 +45,7 @@ def submit_homework():
     source_code = request.json['code']
     homework_id = request.json['id']
 
-    execution_response = ('plm, e ok', 200)
+    execution_response = _homework_service.evaluate_homework(source_code, homework_id)
 
     response = {
         'message': str(execution_response[0]),
@@ -49,3 +53,23 @@ def submit_homework():
     }
 
     return json.dumps(response), 200
+
+
+# @homeworks.route("/notify")
+# def notify():
+
+def update_remaining_time_for_lessons():
+    current_date = time.strftime("%A, %d. %B %Y %I:%M:%S %p")
+    print('[{}] Updating homeworks deadline...'.format(current_date))
+    # TODO: update all uncompleted homeworks for all users and notify them
+    _homework_service.reduce_points_and_days_for_lessons()
+    current_date = time.strftime("%A, %d. %B %Y %I:%M:%S %p")
+    print('[{}] Done!'.format(current_date))
+
+sched = BackgroundScheduler(daemon=True)
+sched.add_job(update_remaining_time_for_lessons, 'interval', seconds = 10)
+sched.start()
+
+#
+# def event_stream():
+#     while True:

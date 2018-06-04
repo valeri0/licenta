@@ -27,3 +27,11 @@ class UserRepository:
 
     def get_user_by_email(self,_email):
         return User.query.filter(User.email == _email).first()
+
+    def add_raw_elo_points_to_user(self,user_id,raw_points):
+        usr = self.get_user_by_id(user_id)
+        usr.elo_rating = usr.elo_rating + raw_points
+        self.db_context.commit()
+
+    def get_all_users(self):
+        return User.query.all()

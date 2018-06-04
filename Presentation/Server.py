@@ -1,8 +1,12 @@
+import time
+
+import os
 from flask import Flask, render_template
 from flask_security import Security
 from flask_login import LoginManager
-
+from apscheduler.schedulers.background import BackgroundScheduler
 from Business.Repositories.UserRepository import UserRepository
+from Business.Services.HomeworkService import HomeworkService
 from Business.Services.LessonService import LessonService
 from Business.Services.UserService import UserService
 from Data.Utils.LoginForm import LoginForm
@@ -69,7 +73,6 @@ app.config['SECURITY_PASSWORD_HASH'] = "sha512_crypt"
 app.config['SECURITY_REGISTER_URL'] = '/create_account'
 app.config['SECURITY_LOGIN_TEMPLATE'] = 'security/register.html'
 app.config['TEMPLATES_AUTO_RELOAD'] = True
-app.debug = True
 
 login_manager = LoginManager()
 login_manager.init_app(app)
@@ -109,5 +112,10 @@ def index():
     return render_template("register.html", login_form=login_form, register_form=register_form)
 
 
+_homework_service = HomeworkService()
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
+
+
+

@@ -33,9 +33,12 @@
         <div class="card-content white-text">
           <span class="card-title">{{ homework.title }}</span>
 
-            <br>
-
-
+             <ul style="list-style: circle">
+                        <li>   <p> <span><i class="tiny material-icons">access_time</i></span> Days remaining: {{ homework_details.days_remaining }}</p></li>
+                        <li>   <p> <span><i class="tiny material-icons">mood</i></span> Points: {{ homework_details.points }}</p></li>
+                    </ul>
+            <h6>Description :</h6>
+            <p>{{ homework.content }}</p>
 
         </div>
       </div>

@@ -9,5 +9,5 @@ class Notification(db.Base):
     user_id = Column(Integer,ForeignKey("user.id"),primary_key=True)
     created_at = Column(DateTime, default=datetime.datetime.now())
     content = Column(String(250),primary_key=True)
-    seen = Column(Boolean())
+    seen = Column(Boolean(),default=False)
 

@@ -7,3 +7,4 @@ Flask
 Flask-WTF
 elo
 APScheduler
+juggernaut
