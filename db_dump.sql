@@ -140,8 +140,36 @@ CREATE TABLE `exercise` (
 
 LOCK TABLES `exercise` WRITE;
 /*!40000 ALTER TABLE `exercise` DISABLE KEYS */;
-INSERT INTO `exercise` VALUES (1,'Sleep in','The parameter weekday is True if it is a weekday, and the parameter vacation is True if we are on vacation. We sleep in if it is not a weekday or we\'re on vacation. Return True if we sleep in.','def sleep_in(weekday, vacation):   ',600,'\ntest_case = [(True, True), (False, False), (False, True), (True, False)]\n\ndef sleep_in(weekday, vacation):   \n	if not weekday or vacation:   \n		return True   \n	else:     \n		return False'),(2,'Sum double','Given two int values, return their sum. Unless the two values are the same, then return double their sum.','def sum_double(a,b):',600,'\ntest_case = [(1,2),(1,3),(1000,-100),(20,20),(0,0),(100,100)]\n\ndef sum_double(a, b):\n  # Store the sum in a local variable\n  sum = a + b\n  \n  # Double it if a and b are the same\n  if a == b:\n    sum = sum * 2\n  return sum'),(3,'Monkey Trouble','We have two monkeys, a and b, and the parameters a_smile and b_smile indicate if each is smiling. We are in trouble if they are both smiling or if neither of them is smiling. Return True if we are in trouble.','def monkey_trouble(a_smile, b_smile):   ',600,'\ntest_case = [(False,False),(True,True),(True,False),(False,True)]\n\ndef monkey_trouble(a_smile, b_smile):\n  if a_smile and b_smile:\n    return True\n  if not a_smile and not b_smile:\n    return True\n  return False\n  '),(4,'Makes10','Given 2 ints, a and b, return True if one if them is 10 or if their sum is 10.','def makes10(a, b):\n  \n',600,'\ntest_case = [(10,2),(9,9),(4,5),(5,6),(4,6),(-2,12)]\n\ndef makes10(a, b):\n  return (a == 10 or b == 10 or a+b == 10)\n  '),(5,'Parrot Trouble','We have a loud talking parrot. \nThe \"hour\" parameter is the current hour time in the range 0..23. \nWe are in trouble if the parrot is talking and the hour is before 7 or after 20. \nReturn True if we are in trouble.','def parrot_trouble(talking, hour):\n  \n',600,'\ntest_case = [(True,10),(True,2),(False,2),(True,20),(False,21),(True,0)]\n\ndef parrot_trouble(talking, hour):\n  return (talking and (hour < 7 or hour > 20))\n  \n'),(6,'Near Hundred','Given an int n, return True if it is within 10 of 100 or 200. \nNote: abs(num) computes the absolute value of a number.','def near_hundred(n):\n\n',1500,'\n\ntest_case = [(90,),(80,),(20,),(30,),(510,),(99,)]\n\ndef near_hundred(n):\n  return ((abs(100 - n) <= 10) or (abs(200 - n) <= 10))\n \n'),(7,'Not String','Given a string, return a new string where \"not \" has been added to the front. \nHowever, if the string already begins with \"not\", return the string unchanged. .','def not_string(str):\n\n',1500,'\ntest_case = [(\"not\",),(\"notanot\",),(\"parrot\",),(\"hello\",),(\"notfunnyman\",)]\n\ndef not_string(str):\n  if len(str) >= 3 and str[:3] == \"not\":\n    return str\n  return \"not \" + str\n'),(8,'String Times','Given a string and a non-negative int n, return a larger string that is n copies of the original string.','def string_times(str, n):\n  \n',1700,'\ntest_case = [(\"not\",2),(\"notanot\",4),(\"parrot\",1),(\"hello\",5),(\"notfunnyman\",6)]\n\ndef string_times(str, n):\n  result = \"\"\n  for i in range(n):  # range(n) is [0, 1, 2, .... n-1]\n    result = result + str  # could use += here\n  return result\n'),(9,'Hello Name','Given a string name, e.g. \"Bob\", return a greeting of the form \"Hello Bob!\". ','def hello_name(name):\n  \n  \n',600,'\ntest_case = [(\"not\",),(\"notanot\",),(\"parrot\",),(\"hello\",),(\"notfunnyman\",)]\n\ndef hello_name(name):\n	return \"Hello \" + name;\n'),(10,'Make tags','The web is built with HTML strings like \"<i>Yay</i>\" which draws Yay as italic text. \nIn this example, the \"i\" tag makes <i> and </i> which surround the word \"Yay\". \nGiven tag and word strings, create the HTML string with tags around the word, e.g. \"<i>Yay</i>\". ','def make_tags(tag, word):\n  \n  \n',1100,'\ntest_case = [(\"i\",\"Huha\"),(\"quote\",\"To be or not to be),(\"p\",\"pp\"),(\"h19\",\"wOw\"),(\"i\",\"uh\")]\n\ndef make_tags(tag, word):\n	return \"<{0}>{1}</{0}>\".format(tag,word)\n'),(11,'First Two','Given a string, return the string made of its first two chars, so the String \"Hello\" yields \"He\". \nIf the string is shorter than length 2, return whatever there is, \nso \"X\" yields \"X\", and the empty string \"\" yields the empty string \"\". ','def first_two(str):\n  \n  \n',1000,'\ntest_case = [(\"123\",),(\"as\",),(\"adsasda\",),(\"1234\",),(\"0\",),(\"oo\",)]\n\ndef first_two(str):\n	if len(str) >= 2:\n		return str[:2]\n	else:\n		return str\n'),(12,'Cigar Party','When squirrels get together for a party, they like to have cigars. A squirrel party is successful when the number of cigars is between 40 and 60, inclusive. Unless it is the weekend, in which case there is no upper bound on the number of cigars. \nReturn True if the party with the given values is successful, or False otherwise.','def cigar_party(cigars, is_weekend):\n	\n  \n',800,'\ntest_case = [(30,False),(40,True),(90,False),(90,True),(45,True),(1,False)]\n\ndef cigar_party(cigars, is_weekend):\n	if weekend:\n		if cigars >= 40:\n			return True\n	elif cigars >= 40 and cigars <= 60:\n		return True\n\n	return False\n');
+INSERT INTO `exercise` VALUES (1,'Sleep in','The parameter weekday is True if it is a weekday, and the parameter vacation is True if we are on vacation. We sleep in if it is not a weekday or we\'re on vacation. Return True if we sleep in.','def sleep_in(weekday, vacation):   ',600,'\ntest_case = [(True, True), (False, False), (False, True), (True, False)]\n\ndef sleep_in(weekday, vacation):   \n	if not weekday or vacation:   \n		return True   \n	else:     \n		return False'),(2,'Sum double','Given two int values, return their sum. Unless the two values are the same, then return double their sum.','def sum_double(a,b):',600,'\ntest_case = [(1,2),(1,3),(1000,-100),(20,20),(0,0),(100,100)]\n\ndef sum_double(a, b):\n  # Store the sum in a local variable\n  sum = a + b\n  \n  # Double it if a and b are the same\n  if a == b:\n    sum = sum * 2\n  return sum'),(3,'Monkey Trouble','We have two monkeys, a and b, and the parameters a_smile and b_smile indicate if each is smiling. We are in trouble if they are both smiling or if neither of them is smiling. Return True if we are in trouble.','def monkey_trouble(a_smile, b_smile):   ',600,'\ntest_case = [(False,False),(True,True),(True,False),(False,True)]\n\ndef monkey_trouble(a_smile, b_smile):\n  if a_smile and b_smile:\n    return True\n  if not a_smile and not b_smile:\n    return True\n  return False\n  '),(4,'Makes10','Given 2 ints, a and b, return True if one if them is 10 or if their sum is 10.','def makes10(a, b):\n  \n',600,'\ntest_case = [(10,2),(9,9),(4,5),(5,6),(4,6),(-2,12)]\n\ndef makes10(a, b):\n  return (a == 10 or b == 10 or a+b == 10)\n  '),(5,'Parrot Trouble','We have a loud talking parrot. \nThe \"hour\" parameter is the current hour time in the range 0..23. \nWe are in trouble if the parrot is talking and the hour is before 7 or after 20. \nReturn True if we are in trouble.','def parrot_trouble(talking, hour):\n  \n',600,'\ntest_case = [(True,10),(True,2),(False,2),(True,20),(False,21),(True,0)]\n\ndef parrot_trouble(talking, hour):\n  return (talking and (hour < 7 or hour > 20))\n  \n'),(6,'Near Hundred','Given an int n, return True if it is within 10 of 100 or 200. \nNote: abs(num) computes the absolute value of a number.','def near_hundred(n):\n\n',1500,'\n\ntest_case = [(90,),(80,),(20,),(30,),(510,),(99,)]\n\ndef near_hundred(n):\n  return ((abs(100 - n) <= 10) or (abs(200 - n) <= 10))\n \n'),(7,'Not String','Given a string, return a new string where \"not \" has been added to the front. \nHowever, if the string already begins with \"not\", return the string unchanged. .','def not_string(str):\n\n',1500,'\ntest_case = [(\"not\",),(\"notanot\",),(\"parrot\",),(\"hello\",),(\"notfunnyman\",)]\n\ndef not_string(str):\n  if len(str) >= 3 and str[:3] == \"not\":\n    return str\n  return \"not \" + str\n'),(8,'String Times','Given a string and a non-negative int n, return a larger string that is n copies of the original string.','def string_times(str, n):\n  \n',1700,'\ntest_case = [(\"not\",2),(\"notanot\",4),(\"parrot\",1),(\"hello\",5),(\"notfunnyman\",6)]\n\ndef string_times(str, n):\n  result = \"\"\n  for i in range(n):  # range(n) is [0, 1, 2, .... n-1]\n    result = result + str  # could use += here\n  return result\n'),(9,'Hello Name','Given a string name, e.g. \"Bob\", return a greeting of the form \"Hello Bob!\". ','def hello_name(name):\n  \n  \n',600,'\ntest_case = [(\"not\",),(\"notanot\",),(\"parrot\",),(\"hello\",),(\"notfunnyman\",)]\n\ndef hello_name(name):\n	return \"Hello \" + name;\n'),(10,'Make tags','The web is built with HTML strings like \"<i>Yay</i>\" which draws Yay as italic text. \nIn this example, the \"i\" tag makes <i> and </i> which surround the word \"Yay\". \nGiven tag and word strings, create the HTML string with tags around the word, e.g. \"<i>Yay</i>\". ','def make_tags(tag, word):\n  \n  \n',1100,'\n\ntest_case = [(\"i\",\"Huha\"),(\"quote\",\"To be or not to be\"),(\"p\",\"pp\"),(\"h19\",\"wOw\"),(\"i\",\"uh\")]\n\ndef make_tags(tag, word):\n	return \"<{0}>{1}</{0}>\".format(tag,word)\n\n'),(11,'First Two','Given a string, return the string made of its first two chars, so the String \"Hello\" yields \"He\". \nIf the string is shorter than length 2, return whatever there is, \nso \"X\" yields \"X\", and the empty string \"\" yields the empty string \"\". ','def first_two(str):\n  \n  \n',1000,'\ntest_case = [(\"123\",),(\"as\",),(\"adsasda\",),(\"1234\",),(\"0\",),(\"oo\",)]\n\ndef first_two(str):\n	if len(str) >= 2:\n		return str[:2]\n	else:\n		return str\n'),(12,'Cigar Party','When squirrels get together for a party, they like to have cigars. A squirrel party is successful when the number of cigars is between 40 and 60, inclusive. Unless it is the weekend, in which case there is no upper bound on the number of cigars. \nReturn True if the party with the given values is successful, or False otherwise.','def cigar_party(cigars, is_weekend):\n	\n  \n',800,'\n\ntest_case = [(30,False),(40,True),(90,False),(90,True),(45,True),(1,False)]\n \ndef func_resolved(cigars, is_weekend):\n    if is_weekend:\n        if cigars >= 40:\n            return True\n    elif cigars >= 40 and cigars <= 60:\n        return True\n \n    return False\n \n');
 /*!40000 ALTER TABLE `exercise` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `homework`
+--
+
+DROP TABLE IF EXISTS `homework`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `homework` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(45) DEFAULT NULL,
+  `content` mediumtext,
+  `days_available` int(11) DEFAULT NULL,
+  `default_points` int(11) DEFAULT NULL,
+  `test_cases` mediumtext,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `homework`
+--
+
+LOCK TABLES `homework` WRITE;
+/*!40000 ALTER TABLE `homework` DISABLE KEYS */;
+INSERT INTO `homework` VALUES (1,'Homework 1','\nWrite a program which can compute the factorial of a given numbers.\nThe results should be printed in a comma-separated sequence on a single line.\nSuppose the following input is supplied to the program:\n8\nThen, the output should be:\n40320\n',14,200,'\r test_case = [(1,),(2,),(3,),(4,),(4,),(5,)]\r \r def fact(x):\r     if x == 0:\r         return 1\r     return x * func_resolved(x - 1)\r   \r   '),(2,'Homework 2','\nWrite a function to check whether a number is in a given range.\nThe function returns True or False.\nfunc(x,left_range,right_range)\n',7,80,'\ntest_case = [(1,0,10),(2,5,7),(3,1,2),(4,5,5),(4,0,10),(5,0,100)]\n\ndef is_in(a,b,c):\n	return a in range(b,c)\n  \n  '),(3,'Homework 3','\nWrite a function to check if a number is prime or not.\n',7,80,'\ntest_case = [(1,),(2,),(4,),(88,),(99,),(137,)]\n\ndef test_prime(n):\n    if (n==1):\n        return False\n    elif (n==2):\n        return True;\n    else:\n        for x in range(2,n):\n            if(n % x==0):\n                return False\n        return True\n  \n  '),(4,'Homework 4','\nWrite a Python program to reverse a string.\n',7,400,'\ntest_case = [(\"1231\",),(\"ana2\",),(\"mere4\",),(\"8844411\",),(\"aa9bb9cc\",),(\"123aa137\",)]\n\ndef string_reverse(str1):\n\n    rstr1 = \'\n    index = len(str1)\n    while index > 0:\n        rstr1 += str1[ index - 1 ]\n        index = index - 1\n    return rstr1\n  \n  ');
+/*!40000 ALTER TABLE `homework` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -173,6 +201,34 @@ INSERT INTO `lesson` VALUES (1,'Introduction','If all you know about a computer 
 UNLOCK TABLES;
 
 --
+-- Table structure for table `notification`
+--
+
+DROP TABLE IF EXISTS `notification`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `notification` (
+  `user_id` int(11) NOT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `content` varchar(250) DEFAULT NULL,
+  `seen` tinyint(4) DEFAULT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`,`user_id`),
+  KEY `user_notification_fk1_idx` (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `notification`
+--
+
+LOCK TABLES `notification` WRITE;
+/*!40000 ALTER TABLE `notification` DISABLE KEYS */;
+INSERT INTO `notification` VALUES (18,'2018-06-04 14:18:35','Homework 2: 6 remaining days!',1,1),(18,'2018-06-04 14:18:36','Homework 2: 5 remaining days!',1,2),(18,'2018-06-04 14:18:35','Homework 2: 5 remaining days!',1,3),(18,'2018-06-04 14:18:36','Homework 2: 4 remaining days!',1,4),(18,'2018-06-04 14:18:35','Homework 2: 3 remaining days!',1,5),(18,'2018-06-04 14:18:36','Homework 2: 2 remaining days!',1,6),(18,'2018-06-04 14:19:11','Homework 2: 1 remaining days!',1,7),(18,'2018-06-04 14:19:12','Homework 2 expired!',1,8),(18,'2018-06-04 14:19:11','Homework 2 expired!',1,9),(18,'2018-06-04 15:31:40','Homework 2: 199 remaining days!',1,10),(18,'2018-06-04 15:31:40','Homework 2: 198 remaining days!',1,11),(18,'2018-06-04 15:31:40','Homework 2: 197 remaining days!',1,12),(18,'2018-06-04 17:29:56','Homework 2: 196 remaining days!',1,13),(18,'2018-06-04 17:29:57','Homework 2: 195 remaining days!',1,14),(18,'2018-06-04 17:29:56','Homework 2: 195 remaining days!',1,15),(18,'2018-06-04 17:29:57','Homework 2: 194 remaining days!',1,16),(18,'2018-06-04 17:29:56','Homework 2: 193 remaining days!',1,17),(18,'2018-06-04 17:29:57','Homework 2: 193 remaining days!',1,18),(18,'2018-06-04 17:29:56','Homework 2: 194 remaining days!',1,19),(18,'2018-06-04 17:29:57','Homework 2: 193 remaining days!',1,20),(18,'2018-06-04 17:32:40','Homework 2: 192 remaining days!',1,21),(18,'2018-06-04 17:32:41','Homework 2: 191 remaining days!',1,22),(18,'2018-06-04 17:32:40','Homework 2: 191 remaining days!',1,23),(18,'2018-06-04 17:32:41','Homework 2: 190 remaining days!',1,24);
+/*!40000 ALTER TABLE `notification` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `role`
 --
 
@@ -184,7 +240,7 @@ CREATE TABLE `role` (
   `name` varchar(80) DEFAULT NULL,
   `description` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -193,7 +249,7 @@ CREATE TABLE `role` (
 
 LOCK TABLES `role` WRITE;
 /*!40000 ALTER TABLE `role` DISABLE KEYS */;
-INSERT INTO `role` VALUES (2,'admin',NULL),(9,'user',NULL),(10,'user',NULL),(11,'user',NULL),(12,'user',NULL),(13,'user',NULL),(14,'user',NULL),(15,'user',NULL),(16,'user',NULL),(17,'user',NULL),(18,'user',NULL),(19,'user',NULL),(20,'user',NULL);
+INSERT INTO `role` VALUES (2,'admin',NULL),(9,'user',NULL),(10,'user',NULL),(11,'user',NULL),(12,'user',NULL),(13,'user',NULL),(14,'user',NULL),(15,'user',NULL),(16,'user',NULL),(17,'user',NULL),(18,'user',NULL),(19,'user',NULL),(20,'user',NULL),(21,'user',NULL),(22,'user',NULL),(23,'user',NULL),(24,'user',NULL);
 /*!40000 ALTER TABLE `role` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -216,7 +272,7 @@ CREATE TABLE `user` (
   UNIQUE KEY `email` (`email`),
   KEY `role_id` (`role_id`),
   CONSTRAINT `user_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `role` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -225,8 +281,37 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (7,NULL,'ion123@gmail.com','$2b$12$LcvRC3ToC84VxjH7MDaGuuZy/vjz91zPoZdK9v8/FvN6ueZKfDIe2',1200.06,NULL,9),(8,NULL,'abc123@gmail.com','$2b$12$oTKMZh.3UDqYfxQx/WHKaOM3s5lkYb8b.dqHvKEThZws0xyPDMJ/6',1200.04,NULL,10),(11,NULL,'new123@gmail.com','$2b$12$UNU9MreF4ZwkgQ07awRoR.IeSfI1LZ6foYqg4uQpiUMXNEcG23NPq',1200,NULL,13),(12,NULL,'val123@gmail.com','$2b$12$8i6QMp7WJHg8.C/W9HWuo.YLgm3lp7enGt1ccu6fA617dRl0rWAVK',1200,NULL,14),(13,NULL,'unu@gmail.com','$2b$12$313kLkcZgIHZTUQOTxpRA.5hZ7bGooVm9uMfw/UJCDjgNpfoMnVA6',1200,NULL,15),(14,NULL,'edy123@gmail.com','$2b$12$oMz7MAaL.fDlPJ5P0ofSW.oCcYaO.XoBbJ/EPrbOm9A/zFWBUH0ZS',1188.58,NULL,16),(15,NULL,'silviu123@gmail.com','$2b$12$6lE6OF6m3hSlqUzRy9suCe0zpAZBF1E2S./Heg3JGM0IQhYztD6fq',1200.02,NULL,17),(16,NULL,'test123@gmail.com','$2b$12$H0Xuei.3hoW19paLk1DqV.cF1EI1QzotH5FzBxB//KSISjM1sTj.e',1201.1,NULL,18),(18,NULL,'qwe123@gmail.com','$2b$12$BWr0VqR17XzKFkJDxBclNu579IUUl74nt4XVOSuGrDkpoaIjSZgrG',1159.08,NULL,20);
+INSERT INTO `user` VALUES (18,NULL,'qwe123@gmail.com','$2b$12$BWr0VqR17XzKFkJDxBclNu579IUUl74nt4XVOSuGrDkpoaIjSZgrG',1192.57,NULL,20),(19,NULL,'diana123@gmail.com','$2b$12$cRa3NH48v7hqMVNvQkcJjO.2AU.xkFurupgnvuORGAbNk90vhw6SC',1200,NULL,21),(20,NULL,'adi123@gmail.com','$2b$12$yHmcTmJaI7yjkD4Ukti2XeWg.DvwAMOekd99Co0TKsoohqWBlSH6m',1200.02,NULL,22),(21,NULL,'ovidiu123@gmail.com','$2b$12$Pu9b9aP1I1p6RQM9a8fZwei6w1TdYZs3wzumciUQqa3tk5rP6to7G',1200.1,NULL,23),(22,NULL,'sun3@gmail.com','$2b$12$QsYaAfmfQBXtw.DyD6hu9.IFCjy/4ptcCFs6HdhbS/Wc/xQCe8CtC',1200.04,NULL,24);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `user_elo_update`
+--
+
+DROP TABLE IF EXISTS `user_elo_update`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user_elo_update` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `elo_difference` float DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `notes` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `user_elo_update_fk1_idx` (`user_id`),
+  CONSTRAINT `user_elo_update_fk1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user_elo_update`
+--
+
+LOCK TABLES `user_elo_update` WRITE;
+/*!40000 ALTER TABLE `user_elo_update` DISABLE KEYS */;
+INSERT INTO `user_elo_update` VALUES (1,18,-24,'2018-06-04 18:50:02',NULL),(2,18,-9,'2018-06-04 18:59:39','Lesson 21'),(3,18,1,'2018-06-04 18:59:39','Lesson 21'),(4,18,0.525682,'2018-06-04 19:02:34','Lesson 22'),(5,18,-0.611245,'2018-06-04 19:17:48','Exercise Not String'),(6,22,0.0177492,'2018-06-04 22:27:45','Lesson Print statements'),(7,18,-9.10156,'2018-06-04 22:27:45','Lesson The break Statement '),(8,18,-0.581112,'2018-06-04 22:27:45','Exercise Not String');
+/*!40000 ALTER TABLE `user_elo_update` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -241,6 +326,7 @@ CREATE TABLE `user_exercise_difficulty` (
   `exercise_id` int(11) NOT NULL,
   `elo_rating` float DEFAULT NULL,
   `completed` tinyint(4) DEFAULT NULL,
+  `temporary_code` mediumtext,
   PRIMARY KEY (`user_id`,`exercise_id`),
   KEY `usr_ex_fk2_idx` (`exercise_id`),
   CONSTRAINT `usr_ex_fk1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
@@ -254,8 +340,41 @@ CREATE TABLE `user_exercise_difficulty` (
 
 LOCK TABLES `user_exercise_difficulty` WRITE;
 /*!40000 ALTER TABLE `user_exercise_difficulty` DISABLE KEYS */;
-INSERT INTO `user_exercise_difficulty` VALUES (7,1,5,0),(8,1,2,0),(14,1,611.751,1),(14,2,599.673,1),(14,3,600,0),(18,1,599.694,1),(18,2,599.693,1),(18,3,602.11,1),(18,4,599.691,1),(18,6,1501.24,0),(18,12,800,0);
+INSERT INTO `user_exercise_difficulty` VALUES (18,1,599.694,1,NULL),(18,2,599.693,1,NULL),(18,3,602.11,1,NULL),(18,4,599.691,1,NULL),(18,5,609.193,1,NULL),(18,6,1492.14,1,NULL),(18,7,1501.58,0,'def not_string(str):\n    if str.startswith(\"not\"):\n        return str\n    else:\n        return \"not\"+str'),(18,9,599.505,1,NULL),(18,10,1095.12,1,NULL),(18,11,996.628,1,NULL),(18,12,798.877,1,NULL),(19,5,600,0,NULL),(20,5,600,0,NULL),(21,5,600,0,NULL),(22,5,600,0,'def parrot_trouble(talking, hour):\n  \n');
 /*!40000 ALTER TABLE `user_exercise_difficulty` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `user_homework_difficulty`
+--
+
+DROP TABLE IF EXISTS `user_homework_difficulty`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user_homework_difficulty` (
+  `user_id` int(11) NOT NULL,
+  `homework_id` int(11) NOT NULL,
+  `points` int(11) DEFAULT NULL,
+  `days_remaining` int(11) DEFAULT NULL,
+  `expired` tinyint(4) DEFAULT NULL,
+  `completed` tinyint(4) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `temporary_code` mediumtext,
+  PRIMARY KEY (`user_id`,`homework_id`),
+  KEY `user_hw_fk2_idx` (`homework_id`),
+  CONSTRAINT `user_hw_fk1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `user_hw_fk2` FOREIGN KEY (`homework_id`) REFERENCES `homework` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user_homework_difficulty`
+--
+
+LOCK TABLES `user_homework_difficulty` WRITE;
+/*!40000 ALTER TABLE `user_homework_difficulty` DISABLE KEYS */;
+INSERT INTO `user_homework_difficulty` VALUES (18,2,100,190,0,1,'2018-06-04 00:51:07','#nimicdef \ndef func(a,b,c):\n    return a in range(b,c)');
+/*!40000 ALTER TABLE `user_homework_difficulty` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -270,6 +389,7 @@ CREATE TABLE `user_lesson_difficulty` (
   `lesson_id` int(11) NOT NULL,
   `elo_rating` float NOT NULL,
   `COMPLETED` tinyint(1) DEFAULT '0',
+  `temporary_code` mediumtext,
   PRIMARY KEY (`user_id`,`lesson_id`),
   KEY `lesson_id` (`lesson_id`),
   CONSTRAINT `user_lesson_difficulty_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
@@ -283,7 +403,7 @@ CREATE TABLE `user_lesson_difficulty` (
 
 LOCK TABLES `user_lesson_difficulty` WRITE;
 /*!40000 ALTER TABLE `user_lesson_difficulty` DISABLE KEYS */;
-INSERT INTO `user_lesson_difficulty` VALUES (7,1,99.9822,1),(7,2,99.9823,1),(7,3,99.9823,1),(7,4,250,0),(7,5,250,0),(7,6,250,0),(7,7,249.958,1),(7,8,250,0),(7,9,200,0),(7,10,300,0),(11,1,100,0),(11,2,100,0),(11,3,100,0),(11,4,250,0),(11,5,250,0),(11,6,250,0),(11,7,250,0),(11,8,250,0),(11,9,200,0),(11,10,300,0),(11,11,700,0),(11,12,700,0),(11,13,700,0),(11,14,700,0),(11,15,700,0),(11,16,900,0),(11,17,1000,0),(12,1,100,0),(12,2,100,0),(12,3,100,0),(12,4,250,0),(12,5,250,0),(12,6,250,0),(12,7,250,0),(12,8,250,0),(12,9,200,0),(12,10,300,0),(12,11,700,0),(12,12,700,0),(12,13,700,0),(12,14,700,0),(12,15,700,0),(12,16,900,0),(12,17,1000,0),(13,1,100,0),(13,2,100,0),(13,3,100,0),(13,4,250,0),(13,5,250,0),(13,6,250,0),(13,7,250,0),(13,8,250,0),(13,9,200,0),(13,10,300,0),(13,11,700,0),(13,12,700,0),(13,13,700,0),(13,14,700,0),(13,15,700,0),(13,16,900,0),(13,17,1000,0),(14,1,99.9822,1),(14,2,109.982,0),(14,3,100,0),(14,4,250,0),(14,5,250,0),(14,6,250,0),(14,7,250,0),(14,8,250,0),(14,9,200,0),(14,10,300,0),(14,11,700,0),(14,12,700,0),(14,13,700,0),(14,14,700,0),(14,15,700,0),(14,16,900,0),(14,17,1000,0),(15,1,99.9822,1),(15,2,100,0),(15,3,100,0),(15,4,250,0),(15,5,250,0),(15,6,250,0),(15,7,250,0),(15,8,250,0),(15,9,200,0),(15,10,300,0),(15,11,700,0),(15,12,700,0),(15,13,700,0),(15,14,700,0),(15,15,700,0),(15,16,900,0),(15,17,1000,0),(16,1,99.9822,1),(16,2,99.9823,1),(16,3,100,0),(16,4,250,0),(16,5,250,0),(16,6,250,0),(16,7,250,0),(16,8,250,0),(16,9,200,0),(16,10,300,0),(16,11,700,0),(16,12,700,0),(16,13,699.468,1),(16,14,699.469,1),(16,15,700,0),(16,16,900,0),(16,17,1000,0),(18,1,99.9775,1),(18,2,99.9775,1),(18,3,100,0),(18,4,250,0),(18,5,250,0),(18,6,250,0),(18,7,250,0),(18,8,250,0),(18,9,200,0),(18,10,300,0),(18,11,700,0),(18,12,700,0),(18,13,700,0),(18,14,700,0),(18,15,700,0),(18,16,900,0),(18,17,1000,0),(18,18,638.539,0),(18,19,800,0),(18,20,1000,0),(18,21,700,0),(18,22,700,0),(18,23,800,0),(18,24,900,0),(18,25,1200,0);
+INSERT INTO `user_lesson_difficulty` VALUES (18,1,99.9775,1,'print(2+2)'),(18,2,99.9775,1,NULL),(18,3,99.9765,1,NULL),(18,4,259.882,1,'print(1+2)'),(18,5,249.941,1,NULL),(18,6,249.941,1,NULL),(18,7,249.941,1,NULL),(18,8,249.941,1,NULL),(18,9,199.956,1,NULL),(18,10,299.922,1,NULL),(18,11,699.27,1,'print(2+2)'),(18,12,699.273,1,'print(2+2)'),(18,13,726.627,1,'print(2+2)'),(18,14,726.129,1,NULL),(18,15,699.043,1,NULL),(18,16,897.503,1,NULL),(18,17,996.316,1,NULL),(18,18,637.874,1,'if 2 == 2: print(\"2 is indeed equal to two\")'),(18,19,798.476,1,'print(1230)'),(18,20,996.584,1,NULL),(18,21,718.074,1,'a = 2;\nwhile(a != 0):\n    print(a)\n    a = a-1'),(18,22,699.474,1,'for i in range(10):\n    print(i)'),(18,23,809.102,0,'dsadsadsadsa'),(18,24,900,0,NULL),(18,25,1200,0,NULL),(19,1,100,0,NULL),(19,2,100,0,NULL),(19,3,100,0,NULL),(19,4,250,0,NULL),(19,5,250,0,NULL),(19,6,250,0,NULL),(19,7,250,0,NULL),(19,8,250,0,NULL),(19,9,200,0,NULL),(19,10,300,0,NULL),(19,11,700,0,NULL),(19,12,700,0,NULL),(19,13,700,0,NULL),(19,14,700,0,NULL),(19,15,700,0,NULL),(19,16,900,0,NULL),(19,17,1000,0,NULL),(19,18,600,0,NULL),(19,19,800,0,NULL),(19,20,1000,0,NULL),(19,21,700,0,NULL),(19,22,700,0,NULL),(19,23,800,0,NULL),(19,24,900,0,NULL),(19,25,1200,0,NULL),(20,1,99.9822,1,NULL),(20,2,100,0,NULL),(20,3,100,0,NULL),(20,4,250,0,NULL),(20,5,250,0,NULL),(20,6,250,0,NULL),(20,7,250,0,NULL),(20,8,250,0,NULL),(20,9,200,0,NULL),(20,10,300,0,NULL),(20,11,700,0,NULL),(20,12,700,0,NULL),(20,13,700,0,NULL),(20,14,700,0,NULL),(20,15,700,0,NULL),(20,16,900,0,NULL),(20,17,1000,0,NULL),(20,18,600,0,NULL),(20,19,800,0,NULL),(20,20,1000,0,NULL),(20,21,700,0,NULL),(20,22,700,0,NULL),(20,23,800,0,NULL),(20,24,900,0,NULL),(20,25,1200,0,NULL),(21,1,99.9822,1,NULL),(21,2,99.9823,1,NULL),(21,3,99.9823,1,NULL),(21,4,249.958,1,NULL),(21,5,250,0,NULL),(21,6,250,0,NULL),(21,7,250,0,NULL),(21,8,250,0,NULL),(21,9,200,0,NULL),(21,10,300,0,NULL),(21,11,700,0,NULL),(21,12,700,0,NULL),(21,13,700,0,NULL),(21,14,700,0,NULL),(21,15,700,0,NULL),(21,16,900,0,NULL),(21,17,1000,0,NULL),(21,18,600,0,NULL),(21,19,800,0,NULL),(21,20,1000,0,NULL),(21,21,700,0,NULL),(21,22,700,0,NULL),(21,23,800,0,NULL),(21,24,900,0,NULL),(21,25,1200,0,NULL),(22,1,99.9822,1,'# Do not be worry about all these symbols written here\n# We will get to the bottom of these asap\n# Just hit \"Submit\" for now!\n\nprint(\"Hello ma Friend!\")'),(22,2,99.9823,1,'#Go ahead, make the computer talk!\nprint(2)'),(22,3,100,0,'print(\"Aleluia\")'),(22,4,250,0,'#This is an example of a comment\n#Comment the line\'s below, or else, the code will produce an error\n\nThis means nothing to the computer, so you better comment it!\nRemember, computer\'s understand they\'re specific language, not human language.\nWell, maybe not yet!'),(22,5,250,0,'#Remember the print, we\'ve learned a few lessons ago!'),(22,6,250,0,'#print your age!\n\n\n\n#print how many eyes do you have\n\n\n\n#print your favourite number!'),(22,7,250,0,''),(22,8,250,0,''),(22,9,200,0,'# a variable can hold a number\n\na = 23\n\n#a variable can hold a string\n\nb = \"Hellooo\"\n\n#and they both can be printed!\n\nprint(a)\nprint(b)'),(22,10,300,0,''),(22,11,700,0,' '),(22,12,700,0,' '),(22,13,700,0,' '),(22,14,700,0,' '),(22,15,700,0,'#'),(22,16,900,0,' '),(22,17,1000,0,'# you will find the results are pretty human readable'),(22,18,600,0,'if 2 == 2: print(\"2 is indeed equal to two\")'),(22,19,800,0,NULL),(22,20,1000,0,NULL),(22,21,700,0,'index = 0 while index < 10: print(\"Currently at step \" + index) index++'),(22,22,700,0,'for i in range(1, 5):     print(i) else:     print(\'The for loop is over\')'),(22,23,800,0,'i = 10 print(\'Final countdown: \') while True: 	if i == 0: 		print(\'Happy Birthday 2018!\')  	else: 		print(i)'),(22,24,900,0,'i = 10 while True: 	if i%2 == 0:		 		continue  	else: 		print(i)'),(22,25,1200,0,NULL);
 /*!40000 ALTER TABLE `user_lesson_difficulty` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -296,4 +416,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-06-01 20:33:12
+-- Dump completed on 2018-06-05 18:57:29

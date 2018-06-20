@@ -12,10 +12,10 @@ class EloRatingRepository:
     _exercise_repository = ExerciseRepository()
     db_context = db_session
 
-    def _get_elo_ratings(self, winner, loser):
+    def get_elo_ratings(self, winner, loser):
         return elo.rate_1vs1(elo.Rating(winner), elo.Rating(loser))
 
-    def _adjust_elo_rating_for_functions(self, winner, loser, test_case_factor):
+    def adjust_elo_rating_for_functions(self, winner, loser, test_case_factor):
         """
         This will adjust the elo rating of the entities when we are dealing with functions
         that need to be tested using different test cases.
@@ -28,7 +28,7 @@ class EloRatingRepository:
         :param test_case_factor: how many test cases there were completed
         :return:
         """
-        default_elo = self._get_elo_ratings(winner, loser)
+        default_elo = self.get_elo_ratings(winner, loser)
 
         new_elo_winner = default_elo[0]
         new_elo_loser = default_elo[1]
@@ -50,10 +50,10 @@ class EloRatingRepository:
             lesson_old_elo = lesson_for_user.elo_rating
             user_old_elo = user.elo_rating
 
-            new_lesson_elo, new_user_elo = self._get_elo_ratings(lesson_old_elo, user_old_elo)
+            new_lesson_elo, new_user_elo = self.get_elo_ratings(lesson_old_elo, user_old_elo)
 
             if test_case_factor:
-                new_lesson_elo, new_user_elo = self._adjust_elo_rating_for_functions(lesson_old_elo, user_old_elo,
+                new_lesson_elo, new_user_elo = self.adjust_elo_rating_for_functions(lesson_old_elo, user_old_elo,
                                                                                      test_case_factor)
 
             user_elo_difference = new_user_elo - user_old_elo
@@ -72,7 +72,7 @@ class EloRatingRepository:
 
         old_user_elo = user.elo_rating
         if not lesson_for_user.completed:
-            new_user_elo, new_lesson_elo = self._get_elo_ratings(user.elo_rating, lesson_for_user.elo_rating)
+            new_user_elo, new_lesson_elo = self.get_elo_ratings(user.elo_rating, lesson_for_user.elo_rating)
 
             user_elo_difference = new_user_elo - old_user_elo
 
@@ -95,11 +95,11 @@ class EloRatingRepository:
         user_old_elo = user.elo_rating
 
         if not exercise_for_user.completed:
-            new_elo_exercise, new_elo_user = self._get_elo_ratings(exercise_for_user.elo_rating, user.elo_rating)
+            new_elo_exercise, new_elo_user = self.get_elo_ratings(exercise_for_user.elo_rating, user.elo_rating)
 
             if test_case_factor:
 
-                new_elo_exercise, new_elo_user = self._adjust_elo_rating_for_functions(exercise_old_elo, user_old_elo,
+                new_elo_exercise, new_elo_user = self.adjust_elo_rating_for_functions(exercise_old_elo, user_old_elo,
                                                                                    test_case_factor)
 
             user_elo_difference = new_elo_user - user_old_elo
@@ -119,7 +119,7 @@ class EloRatingRepository:
 
         if not exercise_for_user.completed:
 
-            new_elo_user, new_elo_exercise = self._get_elo_ratings(user_old_elo,exercise_old_elo)
+            new_elo_user, new_elo_exercise = self.get_elo_ratings(user_old_elo,exercise_old_elo)
 
             user_elo_difference = new_elo_user - user_old_elo
             self._user_repository.add_user_elo_update_entry(user.id,user_elo_difference,"Exercise {}".format(exercise_title))

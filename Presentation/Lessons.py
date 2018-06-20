@@ -34,9 +34,11 @@ def get_lesson_by_id(lesson_id):
 
     temporary_code = _lesson_service.get_temporary_code(lesson_id)
 
-    return render_template("lesson.html", lesson=lesson, is_current_completed=is_current_completed,
+    return render_template("lesson.html", lesson=lesson,
+                           is_current_completed=is_current_completed,
                            previous_lesson=(previous_lesson, is_previous_completed),
-                           next_lesson=(next_lesson, is_next_completed),temporary_code=temporary_code)
+                           next_lesson=(next_lesson, is_next_completed),
+                           temporary_code=temporary_code)
 
 
 @lessons.route("/lesson/completed/<lesson_id>", methods=['GET'])

@@ -5,11 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f9498f0-9fe6-4ec6-9291-8a4075cb0f1b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tests/test_elo_repository.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/display.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dummy testing/script.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dummy testing/test.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Presentation/static/img/photothumb.db" afterPath="$PROJECT_DIR$/Presentation/static/img/photothumb.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documentatie/Licenta Mihaila Andrei-Valerio 2018.docx" afterPath="$PROJECT_DIR$/documentatie/Licenta Mihaila Andrei-Valerio 2018.docx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Business/Repositories/CompilerAuxFiles/script.py" afterPath="$PROJECT_DIR$/Business/Repositories/CompilerAuxFiles/script.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Presentation/static/js/user_profile_charts.js" afterPath="$PROJECT_DIR$/Presentation/static/js/user_profile_charts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Presentation/templates/user_profile.html" afterPath="$PROJECT_DIR$/Presentation/templates/user_profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Business/Repositories/EloRatingRepository.py" afterPath="$PROJECT_DIR$/Business/Repositories/EloRatingRepository.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Presentation/Lessons.py" afterPath="$PROJECT_DIR$/Presentation/Lessons.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Presentation/Server.py" afterPath="$PROJECT_DIR$/Presentation/Server.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Presentation/templates/navbar.html" afterPath="$PROJECT_DIR$/Presentation/templates/navbar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db_dump.sql" afterPath="$PROJECT_DIR$/db_dump.sql" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,11 +44,13 @@
     <SUITE FILE_PATH="coverage/licenta$Nosetests_for_test_lesson_service_LessonServiceTest_test_get_all_lessons.coverage" NAME="Nosetests for test_lesson_service.LessonServiceTest.test_get_all_lessons Coverage Results" MODIFIED="1526496818226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
     <SUITE FILE_PATH="coverage/licenta_python$database.coverage" NAME="database Coverage Results" MODIFIED="1521973441639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/01-Data/Persistance" />
     <SUITE FILE_PATH="coverage/licenta$Authentication.coverage" NAME="Authentication Coverage Results" MODIFIED="1522506995838" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Presentation/Controllers" />
-    <SUITE FILE_PATH="coverage/licenta$Server.coverage" NAME="Server Coverage Results" MODIFIED="1528140460964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Presentation" />
+    <SUITE FILE_PATH="coverage/licenta$display.coverage" NAME="display Coverage Results" MODIFIED="1529233806249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/licenta$Server.coverage" NAME="Server Coverage Results" MODIFIED="1529404968995" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Presentation" />
     <SUITE FILE_PATH="coverage/licenta$Nosetests_for_test_chapter_service_ChapterServiceTest_test_get_chapter_by_id.coverage" NAME="Nosetests for test_chapter_service.ChapterServiceTest.test_get_chapter_by_id Coverage Results" MODIFIED="1526514429461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
     <SUITE FILE_PATH="coverage/licenta$Nosetests_for_test_lesson_service_LessonServiceTest.coverage" NAME="Nosetests for test_lesson_service.LessonServiceTest Coverage Results" MODIFIED="1526497190084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
     <SUITE FILE_PATH="coverage/licenta$Nosetests_for_test_chapter_service_ChapterServiceTest.coverage" NAME="Nosetests for test_chapter_service.ChapterServiceTest Coverage Results" MODIFIED="1526513807404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
     <SUITE FILE_PATH="coverage/licenta$EloRatingRepository.coverage" NAME="EloRatingRepository Coverage Results" MODIFIED="1526131359648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Business/Repositories" />
+    <SUITE FILE_PATH="coverage/licenta$Nosetests_for_test_elo_repository_EloRepositoryTest.coverage" NAME="Nosetests for test_elo_repository.EloRepositoryTest Coverage Results" MODIFIED="1529496375943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
     <SUITE FILE_PATH="coverage/licenta_python$session.coverage" NAME="session Coverage Results" MODIFIED="1521986928320" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/sqlalchemy/orm" />
     <SUITE FILE_PATH="coverage/licenta_python$Server.coverage" NAME="Server Coverage Results" MODIFIED="1521988797531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Presentation" />
     <SUITE FILE_PATH="coverage/licenta$database.coverage" NAME="database Coverage Results" MODIFIED="1527014005799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Data/Persistance" />
@@ -90,74 +100,38 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="user_profile.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Presentation/templates/user_profile.html">
+    <leaf>
+      <file leaf-file-name="test_elo_repository.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tests/test_elo_repository.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="62" column="62" lean-forward="false" selection-start-line="62" selection-start-column="62" selection-end-line="62" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="progress.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Presentation/static/css/progress.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Progress.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Presentation/Progress.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="35" column="16" lean-forward="false" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+            <state relative-caret-position="204">
+              <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#0#22#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_profile_charts.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Presentation/static/js/user_profile_charts.js">
+      <file leaf-file-name="ExerciseService.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Business/Services/ExerciseService.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="24" column="42" lean-forward="false" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
-              <folding />
+            <state relative-caret-position="136">
+              <caret line="35" column="71" lean-forward="false" selection-start-line="35" selection-start-column="71" selection-end-line="35" selection-end-column="71" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+                <element signature="e#3746#3828#0" expanded="false" />
+                <marker date="1528055849380" expanded="true" signature="1079:1080" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="send_code_to_server.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Presentation/static/js/send_code_to_server.js">
+      <file leaf-file-name="ChapterRepository.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Business/Repositories/ChapterRepository.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="2" column="39" lean-forward="false" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="navbar.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Presentation/static/js/navbar.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="10" column="15" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserService.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Business/Services/UserService.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="986">
-              <caret line="58" column="17" lean-forward="false" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
+            <state relative-caret-position="31">
+              <caret line="75" column="8" lean-forward="false" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -172,8 +146,8 @@
         <option value="Jupyter Notebook" />
         <option value="HTML File" />
         <option value="JavaScript File" />
-        <option value="Python Script" />
         <option value="CSS File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -194,10 +168,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Presentation/static/css/list_of_lessons.css" />
-        <option value="$PROJECT_DIR$/Presentation/templates/register.html" />
-        <option value="$PROJECT_DIR$/Presentation/templates/lesson.html" />
-        <option value="$PROJECT_DIR$/Presentation/Authentication.py" />
         <option value="$PROJECT_DIR$/Presentation/templates/dashboard.html" />
         <option value="$PROJECT_DIR$/Presentation/templates/homeworks.html" />
         <option value="$PROJECT_DIR$/Presentation/templates/exercise.html" />
@@ -215,7 +185,6 @@
         <option value="$PROJECT_DIR$/Presentation/static/js/send_code_to_server.js" />
         <option value="$PROJECT_DIR$/Business/Services/LessonService.py" />
         <option value="$PROJECT_DIR$/Business/Services/ExerciseService.py" />
-        <option value="$PROJECT_DIR$/Presentation/Lessons.py" />
         <option value="$PROJECT_DIR$/Presentation/Exercises.py" />
         <option value="$PROJECT_DIR$/Presentation/templates/editor.html" />
         <option value="$PROJECT_DIR$/Business/Repositories/CompilerAuxFiles/script.py" />
@@ -228,14 +197,11 @@
         <option value="$PROJECT_DIR$/Business/Repositories/NotificationRepository.py" />
         <option value="$PROJECT_DIR$/Presentation/static/js/navbar.js" />
         <option value="$PROJECT_DIR$/Business/Services/NotificationService.py" />
-        <option value="$PROJECT_DIR$/Presentation/templates/navbar.html" />
         <option value="$PROJECT_DIR$/Presentation/Homeworks.py" />
         <option value="$PROJECT_DIR$/Presentation/templates/footer.html" />
         <option value="$PROJECT_DIR$/Presentation/AdminView/UserEloUpdate.py" />
         <option value="$PROJECT_DIR$/Presentation/AdminView/UserEloUpdateView.py" />
-        <option value="$PROJECT_DIR$/Presentation/Server.py" />
         <option value="$PROJECT_DIR$/Data/Domain/UserEloUpdate.py" />
-        <option value="$PROJECT_DIR$/Business/Repositories/EloRatingRepository.py" />
         <option value="$PROJECT_DIR$/Presentation/static/css/progress.css" />
         <option value="$PROJECT_DIR$/Business/Repositories/LessonRepository.py" />
         <option value="$PROJECT_DIR$/Business/Repositories/ExerciseRepository.py" />
@@ -245,6 +211,14 @@
         <option value="$PROJECT_DIR$/Presentation/Progress.py" />
         <option value="$PROJECT_DIR$/Presentation/static/js/user_profile_charts.js" />
         <option value="$PROJECT_DIR$/Presentation/templates/user_profile.html" />
+        <option value="$PROJECT_DIR$/Presentation/Server.py" />
+        <option value="$PROJECT_DIR$/Data/Domain/Chapter.py" />
+        <option value="$PROJECT_DIR$/display.py" />
+        <option value="$PROJECT_DIR$/Presentation/Lessons.py" />
+        <option value="$PROJECT_DIR$/Presentation/templates/navbar.html" />
+        <option value="$PROJECT_DIR$/Tests/test_elo_service.py" />
+        <option value="$PROJECT_DIR$/Business/Repositories/EloRatingRepository.py" />
+        <option value="$PROJECT_DIR$/Tests/test_elo_repository.py" />
       </list>
     </option>
   </component>
@@ -255,8 +229,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="959" />
-    <option name="width" value="648" />
+    <option name="x" value="-7" />
+    <option name="width" value="814" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -297,12 +271,41 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="licenta" type="b2602c69:ProjectViewProjectNode" />
               <item name="licenta" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licenta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licenta" type="462c0819:PsiDirectoryNode" />
+              <item name="Business" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licenta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licenta" type="462c0819:PsiDirectoryNode" />
+              <item name="Business" type="462c0819:PsiDirectoryNode" />
+              <item name="Repositories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licenta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licenta" type="462c0819:PsiDirectoryNode" />
+              <item name="Business" type="462c0819:PsiDirectoryNode" />
+              <item name="Services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licenta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licenta" type="462c0819:PsiDirectoryNode" />
+              <item name="Data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licenta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licenta" type="462c0819:PsiDirectoryNode" />
+              <item name="Data" type="462c0819:PsiDirectoryNode" />
+              <item name="Domain" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="licenta" type="b2602c69:ProjectViewProjectNode" />
@@ -322,11 +325,21 @@
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="licenta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licenta" type="462c0819:PsiDirectoryNode" />
+              <item name="Presentation" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licenta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licenta" type="462c0819:PsiDirectoryNode" />
+              <item name="Tests" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -340,16 +353,16 @@
     <property name="SearchEverywhereHistoryKey" value="user_&#9;FILE&#9;file://C:/Users/Lenovo/Documents/GitHub/licenta/Presentation/templates/user_profile.html&#10;LessonS&#9;FILE&#9;file://C:/Users/Lenovo/Documents/GitHub/licenta/Business/Services/LessonService.py&#10;exer&#9;FILE&#9;file://C:/Users/Lenovo/Documents/GitHub/licenta/Presentation/templates/Exercises.py&#10;SQLALchemy&#9;null&#9;null" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\Desktop\work\licenta_python\Presentation" />
+      <recent name="C:\Users\Lenovo\Desktop\work\licenta_python\static" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Lenovo\Documents\GitHub\licenta\Presentation" />
       <recent name="C:\Users\Lenovo\Documents\GitHub\licenta\Business\Services" />
       <recent name="C:\Users\Lenovo\Documents\GitHub\licenta\Data\Persistance\alembic" />
       <recent name="C:\Users\Lenovo\Documents\GitHub\licenta\Business\Repositories" />
       <recent name="C:\Users\Lenovo\Documents\GitHub\licenta\Business\CompilerAuxFiles" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Lenovo\Desktop\work\licenta_python\Presentation" />
-      <recent name="C:\Users\Lenovo\Desktop\work\licenta_python\static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -364,24 +377,22 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Server">
-    <configuration name="HomeworkRepository" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python tests.Nosetests for test_elo_repository.EloRepositoryTest">
+    <configuration name="Nosetests for test_elo_repository.EloRepositoryTest" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
+      <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Business/Repositories" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="licenta_python" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Business/Repositories/HomeworkRepository.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_elo_repository.EloRepositoryTest&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
     <configuration name="NotificationRepository" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -437,6 +448,24 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
+    <configuration name="display" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="licenta_python" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/display.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <configuration name="licenta_python" type="PythonConfigurationType" factoryName="Python" singleton="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -455,39 +484,21 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="script" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Business/Repositories/CompilerAuxFiles" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="licenta_python" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Business/Repositories/CompilerAuxFiles/script.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.licenta_python" />
       <item index="1" class="java.lang.String" itemvalue="Python.Server" />
-      <item index="2" class="java.lang.String" itemvalue="Python.HomeworkRepository" />
-      <item index="3" class="java.lang.String" itemvalue="Python.script" />
-      <item index="4" class="java.lang.String" itemvalue="Python.NotificationRepository" />
-      <item index="5" class="java.lang.String" itemvalue="Python.UserService" />
+      <item index="2" class="java.lang.String" itemvalue="Python.NotificationRepository" />
+      <item index="3" class="java.lang.String" itemvalue="Python.UserService" />
+      <item index="4" class="java.lang.String" itemvalue="Python.display" />
+      <item index="5" class="java.lang.String" itemvalue="Python tests.Nosetests for test_elo_repository.EloRepositoryTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.Server" />
-        <item index="1" class="java.lang.String" itemvalue="Python.UserService" />
-        <item index="2" class="java.lang.String" itemvalue="Python.NotificationRepository" />
-        <item index="3" class="java.lang.String" itemvalue="Python.script" />
-        <item index="4" class="java.lang.String" itemvalue="Python.HomeworkRepository" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Nosetests for test_elo_repository.EloRepositoryTest" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Server" />
+        <item index="2" class="java.lang.String" itemvalue="Python.display" />
+        <item index="3" class="java.lang.String" itemvalue="Python.UserService" />
+        <item index="4" class="java.lang.String" itemvalue="Python.NotificationRepository" />
       </list>
     </recent_temporary>
   </component>
@@ -516,21 +527,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Nosetests_for_test_chapter_service_ChapterServiceTest_test_get_lessons_by_chapter - 2018.05.17 at 02h 57m 02s.xml">
-      <configuration name="Nosetests for test_chapter_service.ChapterServiceTest.test_get_lessons_by_chapter" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Nosetests_for_test_chapter_service_ChapterServiceTest_test_get_lessons_by_chapter - 2018.05.17 at 02h 57m 32s.xml">
-      <configuration name="Nosetests for test_chapter_service.ChapterServiceTest.test_get_lessons_by_chapter" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Nosetests_for_test_chapter_service_ChapterServiceTest_test_get_lessons_by_chapter - 2018.05.17 at 02h 58m 03s.xml">
-      <configuration name="Nosetests for test_chapter_service.ChapterServiceTest.test_get_lessons_by_chapter" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Nosetests_for_test_chapter_service_ChapterServiceTest_test_get_lessons_by_chapter - 2018.05.17 at 02h 58m 20s.xml">
-      <configuration name="Nosetests for test_chapter_service.ChapterServiceTest.test_get_lessons_by_chapter" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Nosetests_for_test_chapter_service_ChapterServiceTest_test_get_lessons_by_chapter - 2018.05.17 at 02h 59m 08s.xml">
-      <configuration name="Nosetests for test_chapter_service.ChapterServiceTest.test_get_lessons_by_chapter" configurationId="tests" />
-    </history-entry>
     <history-entry file="Nosetests_for_test_chapter_service_ChapterServiceTest_test_get_lessons_by_chapter - 2018.05.17 at 02h 59m 30s.xml">
       <configuration name="Nosetests for test_chapter_service.ChapterServiceTest.test_get_lessons_by_chapter" configurationId="tests" />
     </history-entry>
@@ -542,6 +538,21 @@
     </history-entry>
     <history-entry file="Nosetests_for_test_chapter_service_ChapterServiceTest_test_get_lessons_by_chapter - 2018.05.17 at 03h 09m 37s.xml">
       <configuration name="Nosetests for test_chapter_service.ChapterServiceTest.test_get_lessons_by_chapter" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_for_test_elo_repository_EloRepositoryTest - 2018.06.20 at 15h 03m 46s.xml">
+      <configuration name="Nosetests for test_elo_repository.EloRepositoryTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_for_test_elo_repository_EloRepositoryTest - 2018.06.20 at 15h 03m 58s.xml">
+      <configuration name="Nosetests for test_elo_repository.EloRepositoryTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_for_test_elo_repository_EloRepositoryTest - 2018.06.20 at 15h 05m 49s.xml">
+      <configuration name="Nosetests for test_elo_repository.EloRepositoryTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_for_test_elo_repository_EloRepositoryTest - 2018.06.20 at 15h 06m 09s.xml">
+      <configuration name="Nosetests for test_elo_repository.EloRepositoryTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_for_test_elo_repository_EloRepositoryTest - 2018.06.20 at 15h 06m 18s.xml">
+      <configuration name="Nosetests for test_elo_repository.EloRepositoryTest" configurationId="tests" />
     </history-entry>
     <history-entry file="Nosetests_in_Lessons_py - 2018.05.29 at 16h 10m 19s.xml">
       <configuration name="Nosetests in Lessons.py" configurationId="tests" />
@@ -560,7 +571,7 @@
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.053984575" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16195373" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42933333" sideWeight="0.49485862" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16" sideWeight="0.30912596" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294347" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -659,11 +670,6 @@
           <option name="timeStamp" value="83" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Presentation/Lessons.py</url>
-          <line>19</line>
-          <option name="timeStamp" value="87" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Presentation/Homeworks.py</url>
           <line>77</line>
           <option name="timeStamp" value="100" />
@@ -679,7 +685,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="101" />
+      <option name="time" value="102" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -689,86 +695,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Presentation/AdminView/UserExerciseDifficultyView.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="87" lean-forward="false" selection-start-line="5" selection-start-column="73" selection-end-line="5" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Business/Services/ChapterService.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/werkzeug/local.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="346" column="0" lean-forward="false" selection-start-line="346" selection-start-column="0" selection-end-line="346" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/sqlalchemy/orm/scoping.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="156" column="0" lean-forward="false" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/Domain/UserLessonDifficulty.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="19" column="18" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Presentation/AdminView/UserLessonDifficultyView.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Presentation/Lessons.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="38" column="101" lean-forward="false" selection-start-line="38" selection-start-column="101" selection-end-line="38" selection-end-column="101" />
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Presentation/Exercises.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="23" column="53" lean-forward="false" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Business/Repositories/CompilerAuxFiles/script.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/sqlalchemy/orm/attributes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="236" column="0" lean-forward="false" selection-start-line="236" selection-start-column="0" selection-end-line="236" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Data/Domain/UserHomeworkDifficulty.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -783,31 +709,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Business/Services/HomeworkService.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="70" column="84" lean-forward="false" selection-start-line="70" selection-start-column="84" selection-end-line="70" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Presentation/templates/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1088">
           <caret line="64" column="6" lean-forward="true" selection-start-line="64" selection-start-column="6" selection-end-line="64" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Presentation/templates/list_of_homeworks.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="32" column="21" lean-forward="false" selection-start-line="32" selection-start-column="19" selection-end-line="37" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Presentation/templates/list_of_lessons.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-197">
-          <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -832,20 +737,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Presentation/templates/exercise.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Presentation/templates/lesson.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Business/Repositories/NotificationRepository.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -853,41 +744,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Presentation/templates/navbar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="46" lean-forward="false" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Business/Services/NotificationService.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Presentation/Homeworks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="97" column="0" lean-forward="true" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Presentation/templates/editor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Presentation/templates/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -919,32 +779,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Presentation/Server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="97" column="94" lean-forward="false" selection-start-line="97" selection-start-column="94" selection-end-line="97" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Business/Services/ExerciseService.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="92" column="90" lean-forward="false" selection-start-line="92" selection-start-column="55" selection-end-line="92" selection-end-column="90" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-            <element signature="e#3746#3828#0" expanded="false" />
-            <marker date="1528055849380" expanded="true" signature="1079:1080" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Business/Services/LessonService.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="21" column="52" lean-forward="false" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Data/Domain/UserEloUpdate.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -959,20 +793,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Business/Services/CompilerService.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="29" column="48" lean-forward="false" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Business/Repositories/EloRatingRepository.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="125" column="0" lean-forward="true" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Presentation/templates/homework.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -984,7 +804,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -992,14 +811,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="109" column="0" lean-forward="false" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Business/Repositories/ExerciseRepository.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="86" column="89" lean-forward="false" selection-start-line="86" selection-start-column="89" selection-end-line="86" selection-end-column="89" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1019,33 +830,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Business/Services/UserService.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
+        <state relative-caret-position="884">
           <caret line="58" column="17" lean-forward="false" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Presentation/Progress.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="35" column="16" lean-forward="false" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Presentation/static/js/send_code_to_server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="34">
           <caret line="2" column="39" lean-forward="false" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Presentation/static/js/navbar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="170">
           <caret line="10" column="15" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
@@ -1053,16 +852,260 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Presentation/static/js/user_profile_charts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="408">
           <caret line="24" column="42" lean-forward="false" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Presentation/templates/user_profile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="62" column="62" lean-forward="false" selection-start-line="62" selection-start-column="62" selection-end-line="62" selection-end-column="62" />
+        <state relative-caret-position="0">
+          <caret line="55" column="20" lean-forward="false" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Presentation/templates/exercise.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="37" column="18" lean-forward="true" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Business/Services/HomeworkService.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="70" column="84" lean-forward="false" selection-start-line="70" selection-start-column="84" selection-end-line="70" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Presentation/Server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="123" column="0" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Presentation/Progress.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="35" column="16" lean-forward="false" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Presentation/Homeworks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1263">
+          <caret line="97" column="0" lean-forward="true" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JavaScript-modules-diagram/C:/Users/Lenovo/Documents/GitHub/licenta/Presentation/templates/lesson.html">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/Presentation/templates/lesson.html</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="592.0" y="349.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://AlchemyModelDependency/#licenta_python">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>AlchemyModelDependency</ID>
+          <OriginalElement>#licenta_python</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.9" x="592.0" y="-1591.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/Domain/Chapter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#48#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Presentation/templates/editor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Presentation/Compiler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#11#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/display.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="36" lean-forward="false" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Presentation/templates/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Presentation/templates/lesson.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Presentation/templates/list_of_lessons.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="51" lean-forward="false" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Presentation/templates/list_of_homeworks.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Presentation/Lessons.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="40" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/Domain/Lesson.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="86" lean-forward="false" selection-start-line="21" selection-start-column="86" selection-end-line="21" selection-end-column="86" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Presentation/templates/navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Business/Repositories/ExerciseRepository.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="753">
+          <caret line="86" column="89" lean-forward="false" selection-start-line="86" selection-start-column="89" selection-end-line="86" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Business/Services/LessonService.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="21" column="46" lean-forward="true" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Business/Services/CompilerService.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="31" column="50" lean-forward="true" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/test_chapter_service.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Business/Repositories/EloRatingRepository.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1972">
+          <caret line="121" column="50" lean-forward="false" selection-start-line="121" selection-start-column="50" selection-end-line="121" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/test_elo_repository.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Business/Services/ExerciseService.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="35" column="71" lean-forward="false" selection-start-line="35" selection-start-column="71" selection-end-line="35" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+            <element signature="e#3746#3828#0" expanded="false" />
+            <marker date="1528055849380" expanded="true" signature="1079:1080" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Business/Repositories/ChapterRepository.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="75" column="8" lean-forward="false" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
           <folding />
         </state>
       </provider>

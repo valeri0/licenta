@@ -107,7 +107,6 @@ security = Security(app, user_repository.get_user_datastore())
 def index():
     if current_user.is_authenticated:
         current_lesson_id = _lesson_service.get_current_lesson()
-
         return render_template("dashboard.html", user=current_user, current_lesson_id=current_lesson_id)
 
     register_form = RegistrationForm()
